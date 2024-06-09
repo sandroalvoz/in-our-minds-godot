@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtp21lxk6vfh6"]
+
+[ext_resource type="PackedScene" uid="uid://da7ai80i7q1ap" path="res://Scenes/Player.tscn" id="1_hsjsj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c10xc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kivy1"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Blocking" type="Node" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blocking"]
+transform = Transform3D(6.17163, 0, 0, 0, 0.16151, 0, 0, 0, 5.8377, 0, -0.38791, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blocking/StaticBody3D"]
+shape = SubResource("BoxShape3D_c10xc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Blocking/StaticBody3D"]
+mesh = SubResource("BoxMesh_kivy1")
+
+[node name="Player" parent="." instance=ExtResource("1_hsjsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0308855, 0.59216, 0.0278077)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51747, 5.30341)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 2.91899, 5.30341)
