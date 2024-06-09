@@ -22,8 +22,5 @@ mesh = SubResource("BoxMesh_kivy1")
 [node name="Player" parent="." instance=ExtResource("1_hsjsj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0308855, 0.59216, 0.0278077)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51747, 5.30341)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 2.91899, 5.30341)
