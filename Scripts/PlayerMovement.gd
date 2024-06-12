@@ -3,20 +3,15 @@ extends RigidBody3D
 @export var movement_speed : float = 385.0
 @export var max_speed : float = 7.5
 
-@export var jump_force : float = 35.0
+@export var jump_force : float = 25.0
 @export var gravity : float = -9.81
 
 var vertical_velocity : float = 0.0
 
 @onready var camera_3d : Camera3D = $"../Camera3D"
-@onready var ray_cast_3d : RayCast3D = $"../RayCast3D"
+@onready var ray_cast_3d = $"../RayCast3D"
 
-
-func _ready() -> void:
-	ray_cast_3d.exclude_parent = true
-	
-	# todo: bloquear rotación en los ejes
-
+   
 
 func _physics_process(delta: float) -> void:
 	movement(delta)
@@ -55,16 +50,17 @@ func jump(delta : float) -> void:
 	# Check if the player has pressed the jump button
 	if Input.is_action_just_pressed("jump"):
 		vertical_velocity = jump_force
-		
-	#Check if the player is on ground
-	if not (is_on_ground()):
-		vertical_velocity = 0
-		
+				
 	vertical_velocity += gravity * delta
 
 	# Apply the vertical velocity to the player
-	apply_central_force(Vector3(0, vertical_velocity, 0))	
+	if(is_on_ground()):
+		apply_central_force(Vector3(0, vertical_velocity, 0))	
+	
 
 func is_on_ground() -> bool:
-	return ray_cast_3d.is_colliding()
+	if(ray_cast_3d.is_colliding()):
+		return true
+	else:
+		return false
 
