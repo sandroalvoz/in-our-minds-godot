@@ -26,7 +26,7 @@ mesh = SubResource("SphereMesh_voeer")
 surface_material_override/0 = SubResource("StandardMaterial3D_wkt2g")
 
 [node name="RayCast3D" type="RayCast3D" parent="RigidBody3D"]
-top_level = true
+target_position = Vector3(0, -2, 0)
 collision_mask = 2
 debug_shape_custom_color = Color(1, 0.300051, 0.236805, 1)
 
