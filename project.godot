@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Safe In Our World Mental Health Game Dev Champions 2024"
-run/main_scene="res://Scenes/TestLevel.tscn"
+run/main_scene="res://Scenes/Demo.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://2D/icon.svg"
+config/icon="res://icon.svg"
 
 [autoload]
 
 CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
-DrawLine3d="*res://Scripts/DrawLine3D.gd"
+DrawLine3d="*res://Objects/Legacy/DrawLine3D.gd"
 
 [editor_plugins]
 

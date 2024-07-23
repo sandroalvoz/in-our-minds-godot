@@ -1,6 +1,6 @@
 extends Camera3D
 
-@export var rotation_speed: float = 1.5
+@export var rotation_speed: float = 1.65
 @export var return_speed: float = 0.025
 @export var distance: float = 6.5
 @export var y_offset: float = 2.5
