@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cima7g2h3kpmh"]
+[gd_scene load_steps=6 format=3 uid="uid://cima7g2h3kpmh"]
 
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/Player/player.tscn" id="1_08apw"]
+[ext_resource type="Script" path="res://Objects/GameManager.gd" id="2_nl24f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xm8n4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -32,3 +33,6 @@ size = Vector3(12.3692, 0.0833458, 18.6034)
 
 [node name="Player" parent="." instance=ExtResource("1_08apw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.628504, 0)
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("2_nl24f")
