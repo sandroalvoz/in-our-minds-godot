@@ -2,8 +2,25 @@ extends RigidBody3D
 
 @export var movement_speed : float = 385.0
 @export var max_velocity : float = 7.5
+@export var impulse_force : float = 5.0
+@export var slowdown_factor: float = 0.2
+@export var fov_change_amount : float = 15.0 
+
+var original_fov : float
+var impulse_fov : float
 
 @onready var camera_3d = $"../CameraContainer/HRotation/VRotation/SpringArm3D/Camera3D"
+@onready var original_time_scale : float = Engine.time_scale
+@onready var tween = $Tween
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	original_fov = camera_3d.fov
+	impulse_fov = original_fov - fov_change_amount
+	
+	if not tween:
+		tween = get_tree().create_tween()
+	pass 
 
 func _physics_process(delta):
 	if linear_velocity.x > max_velocity:
@@ -16,6 +33,7 @@ func _physics_process(delta):
 		linear_velocity.z = -max_velocity
 	
 	movement(delta)
+	handle_impulse()
 	pass
 	
 func movement(delta):
@@ -32,4 +50,24 @@ func movement(delta):
 	
 	apply_central_force(direction_f * movement_speed * delta)
 	apply_central_force(direction_h * movement_speed * delta)
+	pass
+	
+func handle_impulse():
+	if Input.is_action_pressed("impulse"):
+		Engine.time_scale = slowdown_factor
+
+		#camera_3d.set_fov(impulse_fov)
+		#tween.tween_property(camera_3d, "fov", impulse_fov, 1)
+	
+	if Input.is_action_just_released("impulse"):
+		Engine.time_scale = original_time_scale
+		
+		#tween.kill()
+		#tween.tween_property(camera_3d, "fov", impulse_fov, 1)
+		#camera_3d.set_fov(original_fov)
+		
+		var camera_transform = camera_3d.get_camera_transform()
+		var forward_direction = -camera_transform.basis.z.normalized()  
+		
+		apply_impulse(forward_direction * impulse_force)
 	pass
