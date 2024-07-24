@@ -1,12 +1,12 @@
 [gd_scene load_steps=127 format=3 uid="uid://bdoqd1jc0ruep"]
 
-[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/Player/player.tscn" id="1_lefab"]
+[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/marble.tscn" id="1_lefab"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="2_in6wp"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="3_1l4q4"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="4_76el2"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="5_38u12"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="6_18ulk"]
-[ext_resource type="Script" path="res://Objects/GameManager.gd" id="7_iqjm0"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="7_iqjm0"]
 
 [sub_resource type="Environment" id="Environment_g5eta"]
 background_energy_multiplier = 2.26

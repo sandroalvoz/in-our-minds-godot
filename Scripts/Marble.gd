@@ -11,15 +11,12 @@ var impulse_fov : float
 
 @onready var camera_3d = $"../CameraContainer/HRotation/VRotation/SpringArm3D/Camera3D"
 @onready var original_time_scale : float = Engine.time_scale
-@onready var tween = $Tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	original_fov = camera_3d.fov
 	impulse_fov = original_fov - fov_change_amount
-	
-	if not tween:
-		tween = get_tree().create_tween()
+
 	pass 
 
 func _physics_process(delta):
@@ -55,16 +52,9 @@ func movement(delta):
 func handle_impulse():
 	if Input.is_action_pressed("impulse"):
 		Engine.time_scale = slowdown_factor
-
-		#camera_3d.set_fov(impulse_fov)
-		#tween.tween_property(camera_3d, "fov", impulse_fov, 1)
 	
 	if Input.is_action_just_released("impulse"):
 		Engine.time_scale = original_time_scale
-		
-		#tween.kill()
-		#tween.tween_property(camera_3d, "fov", impulse_fov, 1)
-		#camera_3d.set_fov(original_fov)
 		
 		var camera_transform = camera_3d.get_camera_transform()
 		var forward_direction = -camera_transform.basis.z.normalized()  

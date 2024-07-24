@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bu6csgumns604"]
 
-[ext_resource type="Script" path="res://Objects/Player/Camera.gd" id="1_d1vl8"]
-[ext_resource type="Script" path="res://Objects/Player/Marble.gd" id="1_hjpva"]
+[ext_resource type="Script" path="res://Scripts/Camera.gd" id="1_d1vl8"]
+[ext_resource type="Script" path="res://Scripts/Marble.gd" id="1_hjpva"]
 [ext_resource type="Texture2D" uid="uid://cwkkglrbo53nc" path="res://icon.svg" id="2_qcvt7"]
 [ext_resource type="Texture2D" uid="uid://dmc0kx2e6il1m" path="res://Material/marble-texture.png" id="2_yyb8q"]
 

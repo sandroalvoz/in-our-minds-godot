@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cima7g2h3kpmh"]
 
-[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/Player/player.tscn" id="1_08apw"]
-[ext_resource type="Script" path="res://Objects/GameManager.gd" id="2_nl24f"]
+[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/marble.tscn" id="1_08apw"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_nl24f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xm8n4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
