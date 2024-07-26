@@ -37,6 +37,7 @@ mesh = SubResource("SphereMesh_8pii2")
 surface_material_override/0 = SubResource("StandardMaterial3D_uwf1o")
 
 [node name="CameraContainer" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_d1vl8")
 
 [node name="HRotation" type="Node3D" parent="CameraContainer"]

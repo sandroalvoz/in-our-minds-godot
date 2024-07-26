@@ -167,7 +167,8 @@ camera_attributes = SubResource("CameraAttributesPractical_ac1u7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69074, 0.788564, -0.0351393)
 
 [node name="Goal" parent="." instance=ExtResource("3_tm0vb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63132, 0.996309, -0.19671)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.80701, 0.352964, 0)
+top_level = false
 scene = "Level02"
 
 [node name="Blocking" type="Node" parent="."]
