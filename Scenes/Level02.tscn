@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://c63mnge1w4stg"]
+[gd_scene load_steps=67 format=3 uid="uid://c63mnge1w4stg"]
 
 [ext_resource type="Texture2D" uid="uid://dpf0sxh7prnsf" path="res://Material/wasteland_clouds_puresky.jpg" id="1_x25mb"]
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/marble.tscn" id="2_qgbsg"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="6_jftc6"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="7_yiaon"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="8_v687e"]
+[ext_resource type="PackedScene" uid="uid://d4n3jrsf5mklr" path="res://Objects/gui.tscn" id="10_w5k3b"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3h7iq"]
 panorama = ExtResource("1_x25mb")
@@ -587,3 +588,5 @@ mesh_vector_data = SubResource("Resource_bu6pb")
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("8_v687e")
+
+[node name="Gui" parent="." instance=ExtResource("10_w5k3b")]
