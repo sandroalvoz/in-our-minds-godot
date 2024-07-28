@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="4_76el2"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="5_38u12"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="6_18ulk"]
-[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="7_iqjm0"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/GameManager.gd" id="7_iqjm0"]
 
 [sub_resource type="Environment" id="Environment_g5eta"]
 background_energy_multiplier = 2.26

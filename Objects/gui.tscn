@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4n3jrsf5mklr"]
+[gd_scene load_steps=6 format=3 uid="uid://d4n3jrsf5mklr"]
 
-[ext_resource type="Script" path="res://Scripts/Chrono.gd" id="1_01880"]
+[ext_resource type="Script" path="res://Scripts/GUI/GUIManager.gd" id="1_80t64"]
+[ext_resource type="Script" path="res://Scripts/GUI/Chrono.gd" id="1_01880"]
+[ext_resource type="Script" path="res://Scripts/GUI/Level.gd" id="3_loolu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n2582"]
 line_spacing = 1.0
-font_size = 60
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_jvvc3"]
+font_size = 25
 
 [node name="Gui" type="Control"]
 layout_mode = 3
@@ -13,15 +18,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_80t64")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="ChronoPanel" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_right = 301.0
-offset_bottom = 114.0
+offset_right = 250.0
+offset_bottom = 96.0
+script = ExtResource("1_01880")
 
-[node name="Label" type="Label" parent="PanelContainer"]
+[node name="Label" type="Label" parent="ChronoPanel"]
 layout_mode = 2
 text = "00:00"
 label_settings = SubResource("LabelSettings_n2582")
 horizontal_alignment = 1
-script = ExtResource("1_01880")
+
+[node name="LevelPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_top = 108.0
+offset_right = 250.0
+offset_bottom = 204.0
+script = ExtResource("3_loolu")
+
+[node name="Label" type="Label" parent="LevelPanel"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_jvvc3")
+horizontal_alignment = 1

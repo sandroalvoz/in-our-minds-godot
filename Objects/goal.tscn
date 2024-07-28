@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://d22r677i78v52"]
 
-[ext_resource type="Script" path="res://Scripts/Goal.gd" id="1_wqm5o"]
-[ext_resource type="Texture2D" uid="uid://ca3dcc6bb5n75" path="res://Material/goal-texture.jpg" id="2_3cw3f"]
+[ext_resource type="Script" path="res://Scripts/Gameplay/Goal.gd" id="1_wqm5o"]
+[ext_resource type="Texture2D" uid="uid://ca3dcc6bb5n75" path="res://Textures/goal-texture.jpg" id="2_3cw3f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q6162"]
 
