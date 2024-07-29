@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cr03r0scljmbw"]
+[gd_scene load_steps=29 format=3 uid="uid://cr03r0scljmbw"]
 
 [ext_resource type="Texture2D" uid="uid://dpf0sxh7prnsf" path="res://Textures/clouds_puresky.jpg" id="1_8qvdq"]
 [ext_resource type="PackedScene" uid="uid://d4n3jrsf5mklr" path="res://Objects/gui.tscn" id="1_bpuim"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="3_cdwi8"]
 [ext_resource type="PackedScene" uid="uid://d22r677i78v52" path="res://Objects/goal.tscn" id="3_tm0vb"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="4_jcoow"]
+[ext_resource type="PackedScene" uid="uid://du8na0oacq85n" path="res://Objects/description.tscn" id="4_xmgyh"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="5_x3s58"]
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/marble.tscn" id="6_x3lhq"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="6_xkndq"]
@@ -172,6 +173,10 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.8070
 top_level = false
 scene = "Level02"
 
+[node name="Description" parent="." instance=ExtResource("4_xmgyh")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.93519, 0.686833, 0)
+description = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
+
 [node name="Blocking" type="Node" parent="."]
 
 [node name="block0" type="Node3D" parent="Blocking"]
@@ -183,4 +188,3 @@ mesh_vector_data = SubResource("Resource_7po5b")
 script = ExtResource("7_rx31x")
 
 [node name="Gui" parent="." instance=ExtResource("1_bpuim")]
-scene_name = "Go Forward"

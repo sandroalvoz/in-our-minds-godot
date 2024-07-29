@@ -21,6 +21,7 @@ CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
 DrawLine3d="*res://Objects/Legacy/DrawLine3D.gd"
 SceneManager="*res://addons/scene_manager/scene_manager.tscn"
 Scenes="*res://addons/scene_manager/scenes.gd"
+Gui="*res://Objects/gui.tscn"
 
 [editor_plugins]
 

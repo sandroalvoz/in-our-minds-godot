@@ -590,4 +590,3 @@ mesh_vector_data = SubResource("Resource_bu6pb")
 script = ExtResource("8_v687e")
 
 [node name="Gui" parent="." instance=ExtResource("10_w5k3b")]
-scene_name = "Basic Twist"

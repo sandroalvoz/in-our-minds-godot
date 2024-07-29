@@ -453,4 +453,3 @@ mesh_vector_data = SubResource("Resource_q31bk")
 script = ExtResource("8_vo7om")
 
 [node name="Gui" parent="." instance=ExtResource("10_gjjoo")]
-scene_name = "Jump!"

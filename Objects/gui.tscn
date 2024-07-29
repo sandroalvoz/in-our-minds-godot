@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scripts/GUI/GUIManager.gd" id="1_80t64"]
 [ext_resource type="Script" path="res://Scripts/GUI/Chrono.gd" id="1_01880"]
-[ext_resource type="Script" path="res://Scripts/GUI/Level.gd" id="3_loolu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n2582"]
 line_spacing = 1.0
@@ -10,6 +9,9 @@ font_size = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_jvvc3"]
 font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_1uukh"]
+font_size = 13
 
 [node name="Gui" type="Control"]
 layout_mode = 3
@@ -26,7 +28,7 @@ offset_right = 250.0
 offset_bottom = 96.0
 script = ExtResource("1_01880")
 
-[node name="Label" type="Label" parent="ChronoPanel"]
+[node name="ChronoLabel" type="Label" parent="ChronoPanel"]
 layout_mode = 2
 text = "00:00"
 label_settings = SubResource("LabelSettings_n2582")
@@ -37,9 +39,21 @@ layout_mode = 2
 offset_top = 108.0
 offset_right = 250.0
 offset_bottom = 204.0
-script = ExtResource("3_loolu")
 
-[node name="Label" type="Label" parent="LevelPanel"]
+[node name="LevelLabel" type="Label" parent="LevelPanel"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_jvvc3")
 horizontal_alignment = 1
+
+[node name="DescriptionPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 472.0
+offset_right = 874.0
+offset_bottom = 615.0
+
+[node name="DescriptionLabel" type="Label" parent="DescriptionPanel"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_1uukh")
+horizontal_alignment = 1
+autowrap_mode = 2
