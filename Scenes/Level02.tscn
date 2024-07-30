@@ -1,15 +1,14 @@
-[gd_scene load_steps=67 format=3 uid="uid://c63mnge1w4stg"]
+[gd_scene load_steps=66 format=3 uid="uid://c63mnge1w4stg"]
 
 [ext_resource type="Texture2D" uid="uid://dpf0sxh7prnsf" path="res://Textures/clouds_puresky.jpg" id="1_x25mb"]
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/marble.tscn" id="2_qgbsg"]
 [ext_resource type="PackedScene" uid="uid://d22r677i78v52" path="res://Objects/goal.tscn" id="3_bbxms"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="3_f7x03"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="4_vqb2h"]
+[ext_resource type="PackedScene" uid="uid://du8na0oacq85n" path="res://Objects/description.tscn" id="4_y70t5"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="5_e6gli"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="6_jftc6"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="7_yiaon"]
-[ext_resource type="Script" path="res://Scripts/Gameplay/GameManager.gd" id="8_v687e"]
-[ext_resource type="PackedScene" uid="uid://d4n3jrsf5mklr" path="res://Objects/gui.tscn" id="10_w5k3b"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3h7iq"]
 panorama = ExtResource("1_x25mb")
@@ -564,6 +563,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69074, 0.788564, -0.035139
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.30124, 0.38454, -5.85817)
 scene = "Level03"
 
+[node name="Description" parent="." instance=ExtResource("4_y70t5")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.30075, 0.597554, 0)
+description = "Gira la cámara usando el movimiento del 'Ratón'. ¡Es importante ver en que dirección te mueves!"
+
 [node name="Blocking" type="Node" parent="."]
 
 [node name="block0" type="Node3D" parent="Blocking"]
@@ -585,8 +588,3 @@ mesh_vector_data = SubResource("Resource_txxum")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 script = ExtResource("3_f7x03")
 mesh_vector_data = SubResource("Resource_bu6pb")
-
-[node name="GameManager" type="Node" parent="."]
-script = ExtResource("8_v687e")
-
-[node name="Gui" parent="." instance=ExtResource("10_w5k3b")]

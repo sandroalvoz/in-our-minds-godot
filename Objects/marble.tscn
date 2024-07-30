@@ -19,9 +19,9 @@ albedo_texture = ExtResource("2_yyb8q")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uwf1o"]
 albedo_texture = ExtResource("2_qcvt7")
 
-[node name="Player" type="Node3D"]
+[node name="Player" type="Node3D" groups=["Player"]]
 
-[node name="Marble" type="RigidBody3D" parent="."]
+[node name="Marble" type="RigidBody3D" parent="." groups=["Player"]]
 physics_material_override = SubResource("PhysicsMaterial_qcqbx")
 gravity_scale = 0.9
 linear_damp = 0.8

@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cr13y7qs78opo"]
+[gd_scene load_steps=53 format=3 uid="uid://cr13y7qs78opo"]
 
 [ext_resource type="Texture2D" uid="uid://dpf0sxh7prnsf" path="res://Textures/clouds_puresky.jpg" id="1_j7kv1"]
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/marble.tscn" id="2_8616s"]
@@ -8,8 +8,7 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="5_8tosj"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="6_e5uyr"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="7_f0cud"]
-[ext_resource type="Script" path="res://Scripts/Gameplay/GameManager.gd" id="8_vo7om"]
-[ext_resource type="PackedScene" uid="uid://d4n3jrsf5mklr" path="res://Objects/gui.tscn" id="10_gjjoo"]
+[ext_resource type="PackedScene" uid="uid://du8na0oacq85n" path="res://Objects/description.tscn" id="10_cmfxc"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3h7iq"]
 panorama = ExtResource("1_j7kv1")
@@ -432,6 +431,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69074, 0.788564, -0.035139
 [node name="Goal" parent="." instance=ExtResource("3_7txc7")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.97148, 1.0245, 0.0447635)
 
+[node name="Description" parent="." instance=ExtResource("10_cmfxc")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.707601, 0)
+description = "¡Puedes lograr un impulso extra si mantienes la 'Barra Espaciadora' y la sueltas!"
+
 [node name="Blocking" type="Node" parent="."]
 
 [node name="block2" type="Node3D" parent="Blocking"]
@@ -448,8 +451,3 @@ mesh_vector_data = SubResource("Resource_0aqop")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.84605, 0.295213, -1.58088)
 script = ExtResource("3_we260")
 mesh_vector_data = SubResource("Resource_q31bk")
-
-[node name="GameManager" type="Node" parent="."]
-script = ExtResource("8_vo7om")
-
-[node name="Gui" parent="." instance=ExtResource("10_gjjoo")]
