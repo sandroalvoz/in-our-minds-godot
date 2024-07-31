@@ -8,7 +8,13 @@ func _ready():
 	description_panel.visible = false
 	
 	var scene_number = str(SceneManager._current_scene)
-	level_label.text = scene_number + "\n" + "scene_name"
+	level_label.text = scene_number + "\n" + "scene_name" #todo change 
+	
+	SceneManager.scene_changed.connect(_on_scene_changed)
+	
+func _on_scene_changed():
+	var scene_number = str(SceneManager._current_scene)
+	level_label.text = scene_number + "\n" + "scene_name" #todo change
 
 func on_show_description(messg : String) -> void:
 	description_panel.visible = true

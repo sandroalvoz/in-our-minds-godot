@@ -28,17 +28,6 @@ func _ready() -> void:
  SceneManager.validate_pattern(fade_out_pattern)
  SceneManager.validate_pattern(fade_in_pattern)
 
-func _on_button_button_up():
- SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)
-
-func _on_reset_button_up():
- SceneManager.reset_scene_manager()
-
-func _on_pause_and_resume_button_up():
- await SceneManager.pause(fade_out_options, general_options)
- await get_tree().create_timer(3).timeout
- await SceneManager.resume(fade_in_options, general_options)
-
-
 func _on_area_3d_body_entered(body):
- _on_button_button_up()
+ if body.is_in_group("Player"):
+  SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)
