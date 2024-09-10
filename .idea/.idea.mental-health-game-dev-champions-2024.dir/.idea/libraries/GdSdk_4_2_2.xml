@@ -1,10 +1,10 @@
-﻿<component name="libraryTable">
+<component name="libraryTable">
   <library name="GdSdk 4.2.2" type="GdScript">
-    <properties path="C:\Users\dakkua\AppData\Local\JetBrains\Rider2023.3\projects\.idea.mental-health-game-dev-champions-2024.dir.fc1ef13\sdk\GdSdk 4.2.2" version="4.2.2" date="2024-06-01T15:14:16.000+02:00" />
+    <properties path="C:\Users\danie\AppData\Local\JetBrains\Rider2024.1\projects\.idea.mental-health-game-dev-champions-2024.dir.8f12e2ee\sdk\GdSdk 4.2.2" version="4.2.2" date="2024-06-01T15:14:16.000+02:00" />
     <CLASSES />
     <JAVADOC />
     <SOURCES>
-      <root url="file://$USER_HOME$/AppData/Local/JetBrains/Rider2023.3/projects/.idea.mental-health-game-dev-champions-2024.dir.fc1ef13/sdk/GdSdk 4.2.2" />
+      <root url="file://$USER_HOME$/AppData/Local/JetBrains/Rider2024.1/projects/.idea.mental-health-game-dev-champions-2024.dir.8f12e2ee/sdk/GdSdk 4.2.2" />
     </SOURCES>
   </library>
 </component>

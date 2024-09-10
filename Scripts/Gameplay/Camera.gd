@@ -13,8 +13,8 @@ var camrot_h : float = 0.0
 var camrot_v : float = 0.0
 
 @onready var marble = $"../Marble"
-@onready var h_rotation = $HRotation
-@onready var v_rotation = $HRotation/VRotation
+@onready var h_rotation: Node3D = $HRotation
+@onready var v_rotation: Node3D = $HRotation/VRotation
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
