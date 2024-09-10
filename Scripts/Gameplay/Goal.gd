@@ -31,5 +31,3 @@ func _ready() -> void:
 func _on_area_3d_body_entered(body):
  if body.is_in_group("Player"):
   SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)
-  #ponemos la velodidad del body a 0
-  #body.velocity = Vector3(0, 0, 0)
