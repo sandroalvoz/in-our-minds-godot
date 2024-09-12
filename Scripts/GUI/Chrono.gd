@@ -1,17 +1,25 @@
-extends PanelContainer
+extends Label
 
-@onready var chrono_label = $ChronoLabel
+@onready var on_chrono: bool = false
+@export var start_at_beginning: bool = true
 var elapsed_time: float = 0.0
 
 func _ready():
-	chrono_label.text = "00:00"
+	text = "00:00"
+	if(start_at_beginning):
+		on_chrono = true
 
 func _process(delta: float):
-	elapsed_time += delta
-	chrono_label.text = format_time(elapsed_time)
+	if(on_chrono):
+		elapsed_time += delta
+		text = format_time(elapsed_time)
 	
 func format_time(time: float) -> String:
 	var minutes = int(int(time / 60) % 60)
 	var seconds = int(int(time) % 60)
 	return ("%02d" % minutes) + (":%02d" % seconds)
+	
+func reset_chrono() -> void:
+	text = "00:00"
+	elapsed_time = 0.0
 

@@ -18,8 +18,6 @@ var camrot_v : float = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#hide mouse at start
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	pass # Replace with function body.
 	
 func _physics_process(delta):

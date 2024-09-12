@@ -1,25 +1,28 @@
 extends Control
 
-@onready var level_label = $LevelPanel/LevelLabel
-@onready var description_label = $DescriptionPanel/DescriptionLabel
-@onready var description_panel = $DescriptionPanel
+@export var chrono: Node
+
+@onready var panel_container = $PanelContainer
+@onready var level_label = $PanelContainer/VBoxContainer/LevelLabel
+@onready var description_label = $PanelContainer/DescriptionLabel
 
 func _ready():
-	description_panel.visible = false
+	description_label.visible = false
+	SceneManager.scene_changed.connect(GameManager._on_scene_changed)
 	
-	var scene_number = str(SceneManager._current_scene)
-	level_label.text = scene_number + "\n" + "scene_name" #todo change 
-	
-	SceneManager.scene_changed.connect(_on_scene_changed)
-	
-func _on_scene_changed():
-	var scene_number = str(SceneManager._current_scene)
-	level_label.text = scene_number + "\n" + "scene_name" #todo change
+	_on_set_visibility(false)
 
-func on_show_description(messg : String) -> void:
-	description_panel.visible = true
+func _on_show_description(messg : String) -> void:
+	description_label.visible = true
 	description_label.text = messg 
 	
-func  on_not_show_description() -> void:
-	description_panel.visible = false
+func _on_not_show_description() -> void:
+	description_label.visible = false
 	description_label.text = ""
+	
+func _on_set_chrono(state : bool) -> void:
+	chrono.on_chrono = state
+	chrono.reset_chrono()
+	
+func _on_set_visibility(state : bool) -> void:
+	panel_container.visible = state

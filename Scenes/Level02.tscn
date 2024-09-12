@@ -565,7 +565,7 @@ scene = "Level03"
 
 [node name="Description" parent="." instance=ExtResource("4_y70t5")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.30075, 0.597554, 0)
-description = "Gira la cámara usando el movimiento del 'Ratón'. ¡Es importante ver en que dirección te mueves!"
+description = "Gira la cámara usando el movimiento del 'Mouse'. ¡Es importante ver en que dirección te mueves! La dirección de la camara afecta directamente al movimiento."
 
 [node name="Blocking" type="Node" parent="."]
 
