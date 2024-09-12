@@ -30,4 +30,7 @@ func _ready() -> void:
 
 func _on_area_3d_body_entered(body):
  if body.is_in_group("Player"):
-  SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)
+  if(scene == ""):
+   GameManager._reset_game()
+  else:
+   SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)
