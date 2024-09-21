@@ -9,7 +9,7 @@ In our Minds' (Provisional Title), is a **casual-platform videogame**, developed
 
 [![diM0f1t.md.png](https://iili.io/diM0f1t.md.png)](https://freeimage.host/i/diM0f1t)
 
-If you want to explore more about the story, mechanics, project vision, art style and more look at:
+If you want to explore more about the story, mechanics, project vision, art style, and more take a look:
 [One Pager Design Document](https://docs.google.com/document/d/1IFXtjuVabRxfs5BDGFTM4EodXScg6qZq5i2X_m0mhg4/edit?usp=sharing)
 
 ## Installation
@@ -35,7 +35,7 @@ Go to the project directory
 
 ## Contribute
 
-As this is an open project but belongs to a [GameJam](https://itch.io/jam/mental-health-game-dev-champions-2024), it's important that you let me know beforehand, if you meet any of the required profiles. If I give you permissions you can clone the repository on your site. At most, **a group of 6 contributors can be formed.**
+As this is an open project but belongs to a [GameJam](https://itch.io/jam/mental-health-game-dev-champions-2024), you must let me know beforehand, if you meet any of the required profiles. If I give you permissions you can clone the repository on your site. At most, **a group of 6 contributors can be formed.**
 
 To get started, you need to work on [Godot 4.2 stable](https://godotengine.org/download/archive/4.2-stable/)
 
@@ -62,9 +62,10 @@ These are some of the key areas:
 - Gameplay development
 - Audio and Sound effects
 - User Interface
+- Game localization
 - Bugs and Issues
 
-The different tasks and developments available are in the **Issues** section of the repository. 
+The different tasks and developments available are in the [**Issues**](https://github.com/DakkuaDev/in-our-minds-godot/issues) section of the repository. 
 
 ## Screenshots
 
