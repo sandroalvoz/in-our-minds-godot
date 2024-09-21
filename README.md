@@ -1,11 +1,11 @@
 # In our Minds 
 
-In our Minds' (Provisional Title), is a **casual-platform videogame**, developed in **Godot Engine 4.0 and GDScript** that tells, through the different scenarios, how complex human emotions are.
+In our Minds(Provisional Title), is a **casual-platform videogame**, developed in **Godot Engine 4.0 and GDScript** that tells, through the different scenarios, how complex human emotions are.
 
 
 ## Introduction
 
-‘Inside you is a world of thoughts and emotions, some familiar and some mysterious. You must navigate through them, overcoming the obstacles that the mind itself creates. Every step is an opportunity to understand and move forward.’
+Inside you is a world of thoughts and emotions, some familiar and some mysterious. You must navigate through them, overcoming the obstacles that the mind itself creates. Every step is an opportunity to understand and move forward.
 
 [![diM0f1t.md.png](https://iili.io/diM0f1t.md.png)](https://freeimage.host/i/diM0f1t)
 
@@ -16,7 +16,7 @@ If you want to explore more about the story, mechanics, project vision, art styl
 
 The project has a prototype version showing some of its main mechanics and handling.
 
-Go to the **Releases** section and download the latest version available.
+Go to the [**Releases**](https://github.com/DakkuaDev/in-our-minds-godot/releases) section and download the latest version available.
 
 
 ## Run Locally
