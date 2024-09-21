@@ -11,7 +11,7 @@ In our Minds' (Provisional Title), is a **casual-platform videogame**, developed
 
 ## Installation
 
-Currently, the project has a prototype version showing some of its main mechanics and handling.
+The project has a prototype version showing some of its main mechanics and handling.
 
 Go to the **Releases** section and download the latest version available.
 
@@ -32,13 +32,13 @@ Go to the project directory
 
 ## Contribute
 
-As this is an open project but belongs to a [Game-Jam](https://itch.io/jam/mental-health-game-dev-champions-2024), it's important that you let me know beforehand, if you meet any of the required profiles. If I give you permissions you can clone the repository on your site. At most, **a group of 6 contributors can be formed.**
+As this is an open project but belongs to a [GameJam](https://itch.io/jam/mental-health-game-dev-champions-2024), it's important that you let me know beforehand, if you meet any of the required profiles. If I give you permissions you can clone the repository on your site. At most, **a group of 6 contributors can be formed.**
 
 To get started, you need to work on [Godot 4.2 stable](https://godotengine.org/download/archive/4.2-stable/)
 
-The project makes use of the [cyclopsLevelBuilder](https://github.com/blackears/cyclopsLevelBuilder) library dependency for level design and prototyping. 
+The project uses the [cyclopsLevelBuilder](https://github.com/blackears/cyclopsLevelBuilder) library dependency for level design and prototyping. 
 
-Pending developments are marked in the **Roadmap** section. Have a look at that section before deciding what you want to help with.
+Pending developments are marked in the **Roadmap** section. Look at that section before deciding what you want to help with.
 
 If you make any changes you have two ways to notify me:
 
@@ -54,6 +54,7 @@ If you have doubts about how to do this, please contact me.
 
 ## Roadmap
 
+These are some of the key areas:
 - Level design
 - Gameplay development
 - Audio and Sound effects
