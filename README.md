@@ -9,6 +9,9 @@ In our Minds' (Provisional Title), is a **casual-platform videogame**, developed
 
 [![diM0f1t.md.png](https://iili.io/diM0f1t.md.png)](https://freeimage.host/i/diM0f1t)
 
+If you want to explore more about the story, mechanics, project vision, art style and more look at:
+[One Pager Design Document](https://docs.google.com/document/d/1IFXtjuVabRxfs5BDGFTM4EodXScg6qZq5i2X_m0mhg4/edit?usp=sharing)
+
 ## Installation
 
 The project has a prototype version showing some of its main mechanics and handling.
