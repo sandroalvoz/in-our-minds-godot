@@ -55,9 +55,13 @@ func handle_impulse():
 	
 	if Input.is_action_just_released("impulse"):
 		Engine.time_scale = original_time_scale
+		if(Gui._consume_stamina_progress_bar()):
+			var camera_transform = camera_3d.get_camera_transform()
+			var forward_direction = -camera_transform.basis.z.normalized()  
 		
-		var camera_transform = camera_3d.get_camera_transform()
-		var forward_direction = -camera_transform.basis.z.normalized()  
+			apply_impulse(forward_direction * impulse_force)
+		else:
+			#the user cannot impulse
+			pass
 		
-		apply_impulse(forward_direction * impulse_force)
 	pass

@@ -1,7 +1,7 @@
 extends Control
 
-@onready var btn_start = $Panel/VBoxContainer/BtnStart
-@onready var btn_exit = $Panel/VBoxContainer/BtnExit
+@onready var btn_start : Button = $Panel/VBoxContainer/BtnStart
+@onready var btn_exit : Button = $Panel/VBoxContainer/BtnExit
 
 func _on_btn_start_button_down():
 	GameManager._start_game()

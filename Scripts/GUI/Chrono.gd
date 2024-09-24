@@ -1,7 +1,8 @@
 extends Label
 
-@onready var on_chrono: bool = false
 @export var start_at_beginning: bool = true
+
+var on_chrono: bool = false
 var elapsed_time: float = 0.0
 
 func _ready():

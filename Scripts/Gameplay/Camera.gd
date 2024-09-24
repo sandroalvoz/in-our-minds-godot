@@ -1,6 +1,7 @@
 extends Node3D
 
 @export_category("Configurables")
+
 @export var cam_v_max : float = 110.0
 @export var cam_v_min : float = -75.0
 @export var h_sensitivity : float = 0.1
@@ -9,16 +10,13 @@ extends Node3D
 @export var v_acceleration : float = 15.0
 @export var smooth_camera_tolerance : float = .3
 
-var camrot_h : float = 0.0
-var camrot_v : float = 0.0
-
 @onready var marble = $"../Marble"
 @onready var h_rotation: Node3D = $HRotation
 @onready var v_rotation: Node3D = $HRotation/VRotation
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var camrot_h : float = 0.0
+var camrot_v : float = 0.0
+
 	
 func _physics_process(delta):
 	global_position = lerp(global_position, marble.get_node("MeshInstance3D").global_position,smooth_camera_tolerance)
@@ -28,7 +26,6 @@ func _physics_process(delta):
 	h_rotation.rotation_degrees.y = lerp(h_rotation.rotation_degrees.y, camrot_h, delta * h_acceleration)
 	v_rotation.rotation_degrees.x = lerp(v_rotation.rotation_degrees.x, camrot_v, delta * v_acceleration)
 	rotation_degrees.z = 0
-	
 	
 func _input(event):
 	if event is InputEventMouseMotion:
