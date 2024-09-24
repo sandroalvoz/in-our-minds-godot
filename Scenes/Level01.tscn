@@ -173,7 +173,7 @@ scene = "Level02"
 
 [node name="Description" parent="." instance=ExtResource("4_xmgyh")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.17656, 0.674073, -0.036)
-description = "Bienvenido a la Demo Técnica. Aquí po explorarás algunas mecánicas de juego. Comienza desplazándote usando 'W,A,S,D' y llega hasta la linea de meta sin caerte. Pulsa 'Esc' para salir al menú principal. Pulsa 'R' para reiniciar el nivel."
+description = "Bienvenido a la Demo Técnica. Aquí podrás explorarás algunas mecánicas de juego. Comienza desplazándote usando 'W,A,S,D' y llega hasta la linea de meta sin caerte. Pulsa 'Esc' para salir al menú principal. Pulsa 'R' para reiniciar el nivel."
 
 [node name="Blocking" type="Node" parent="."]
 

@@ -13,11 +13,13 @@ func _ready():
 	
 func _reset_gui() -> void:
 	_show_gui(true)
+	_on_show_description("", false)
 	_on_set_chrono(true)
 	_reset_stamina_progress_bar()
 	
 func _stop_gui() -> void:
 	_show_gui(false)
+	_on_show_description("", false)
 	_on_set_chrono(false)
 	_reset_stamina_progress_bar()
 	level_label.text = ""
