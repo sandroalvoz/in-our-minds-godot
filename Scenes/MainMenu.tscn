@@ -32,28 +32,28 @@ alignment = 1
 
 [node name="LblTitle" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Safe In Our World Mental Health Game Dev Champions 2024"
+text = "GAME_TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LblVersion" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "v12.09.2024a"
+text = "v26.09.2024a"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BtnStart" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Comenzar Partida"
+text = "START_GAME"
 
 [node name="BtnOptions" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 disabled = true
-text = "Opciones"
+text = "GAME_OPTIONS"
 
 [node name="BtnExit" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Salir de la Demo"
+text = "EXIT_GAME"
 
 [connection signal="button_down" from="Panel/VBoxContainer/BtnStart" to="." method="_on_btn_start_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnExit" to="." method="_on_btn_exit_button_down"]

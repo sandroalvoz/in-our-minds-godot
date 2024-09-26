@@ -7,6 +7,7 @@ enum GUI_MODE  {CONTINUE, RESET, STOP}
 
 func _ready():
 	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP)
+	TranslationServer.set_locale("en") # by default the game is 'en'
 	
 	pass
 
@@ -60,7 +61,8 @@ func  _exit_game() -> void:
 	pass
 	
 func _update_gui(state : int, mode : int) -> void:
-	current_level_name = str(SceneManager._scene_names[SceneManager._current_scene_number]) 
+	#current_level_name = str(SceneManager._scene_names[SceneManager._current_scene_number]) 
+	current_level_name = _update_scene_name(SceneManager._current_scene_number)
 	
 	Gui.level_label.text = current_level_name
 	
@@ -79,6 +81,15 @@ func _update_gui(state : int, mode : int) -> void:
 			Gui._stop_gui()
 			
 	pass
+	
+func _update_scene_name(current_index : int) -> String:
+	match current_index:
+		0: return tr("LEVEL_1_NAME")
+		1: return tr("LEVEL_2_NAME")
+		2: return tr("LEVEL_3_NAME")
+		3: return tr("LEVEL_4_NAME")
+		4: return tr("LEVEL_5_NAME")
+	return "null"
 	
 func _freeze_game(state : bool) -> void:
 	get_tree().paused = state

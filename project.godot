@@ -21,9 +21,9 @@ CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
 DrawLine3d="*res://Objects/Legacy/DrawLine3D.gd"
 SceneManager="*res://addons/scene_manager/scene_manager.tscn"
 Scenes="*res://addons/scene_manager/scenes.gd"
-Gui="*res://Objects/gui.tscn"
-GameManager="*res://Objects/game_manager.tscn"
-PauseMenu="*res://Objects/pause_menu.tscn"
+Gui="*res://Objects/Autoload/gui.tscn"
+GameManager="*res://Objects/Autoload/game_manager.tscn"
+PauseMenu="*res://Objects/Autoload/pause_menu.tscn"
 
 [editor_plugins]
 
@@ -76,6 +76,10 @@ impulse={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Translation/in-our-minds-godot-translations.en.translation", "res://Translation/in-our-minds-godot-translations.es.translation")
 
 [layer_names]
 

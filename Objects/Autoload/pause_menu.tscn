@@ -33,18 +33,18 @@ alignment = 1
 
 [node name="LblTitle" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Pausa"
+text = "PAUSE_GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BtnContinue" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "Continuar Partida"
+text = "CONTINUE_GAME"
 
 [node name="BtnMainMenu" type="Button" parent="Panel/VBoxContainer"]
 process_mode = 2
 layout_mode = 2
-text = "Salir al Menu Principal"
+text = "EXIT_MAIN_MENU"
 
 [connection signal="button_down" from="Panel/VBoxContainer/BtnContinue" to="." method="_on_btn_continue_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnMainMenu" to="." method="_on_btn_main_menu_button_down"]
