@@ -19,7 +19,7 @@ func _ready():
 
 	pass 
 
-func _physics_process(delta):
+func _physics_process(delta) -> void:
 	if linear_velocity.x > max_velocity:
 		linear_velocity.x = max_velocity
 	if linear_velocity.x < -max_velocity:
@@ -33,7 +33,7 @@ func _physics_process(delta):
 	handle_impulse()
 	pass
 	
-func movement(delta):
+func movement(delta) -> void:
 	var f_input = Input.get_action_raw_strength("backward") - Input.get_action_raw_strength("forward")
 	var h_input = Input.get_action_raw_strength("right") - Input.get_action_raw_strength("left")
 	
@@ -49,7 +49,7 @@ func movement(delta):
 	apply_central_force(direction_h * movement_speed * delta)
 	pass
 	
-func handle_impulse():
+func handle_impulse() -> void:
 	if Input.is_action_pressed("impulse"):
 		Engine.time_scale = slowdown_factor
 	

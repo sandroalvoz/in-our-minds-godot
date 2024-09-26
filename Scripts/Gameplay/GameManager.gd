@@ -7,15 +7,21 @@ enum GUI_MODE  {CONTINUE, RESET, STOP}
 
 func _ready():
 	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP)
+	
+	pass
 
 func _process(delta):
 	
 	if Input.is_action_just_pressed("exit"):
-		_reset_game()
+		#_reset_game()
+		_freeze_game(true)
+		PauseMenu.visible = true
 			
 	if Input.is_action_just_pressed("reload"):
 		_reload_scene()
-			
+		
+	pass
+		
 func _start_game() -> void:
 	SceneManager._current_scene_number = 0
 	SceneManager._change_scene("Level01", true)
@@ -24,13 +30,19 @@ func _start_game() -> void:
 	
 	_update_gui(GUI_STATE.ENABLE, GUI_MODE.RESET) 
 	
+	pass
+	
 func _on_scene_changed() -> void:
 	SceneManager._current_scene_number += 1	
 	_update_gui(GUI_STATE.ENABLE, GUI_MODE.RESET) 
 	
+	pass
+	
 func _reload_scene() -> void:
 	SceneManager._change_scene("reload", true)
 	_update_gui(GUI_STATE.ENABLE, GUI_MODE.RESET) 
+	
+	pass
 	
 func _reset_game() -> void:
 	SceneManager._current_scene_number = 0
@@ -40,8 +52,12 @@ func _reset_game() -> void:
 	
 	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP) 
 	
+	pass
+	
 func  _exit_game() -> void:
 	SceneManager._change_scene("exit", true)
+	
+	pass
 	
 func _update_gui(state : int, mode : int) -> void:
 	current_level_name = str(SceneManager._scene_names[SceneManager._current_scene_number]) 
@@ -61,6 +77,15 @@ func _update_gui(state : int, mode : int) -> void:
 			Gui._reset_gui()
 		GUI_MODE.STOP:
 			Gui._stop_gui()
-
-
+			
+	pass
 	
+func _freeze_game(state : bool) -> void:
+	get_tree().paused = state
+	
+	if(state):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		
+	pass

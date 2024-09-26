@@ -16,7 +16,6 @@ extends Node3D
 
 var camrot_h : float = 0.0
 var camrot_v : float = 0.0
-
 	
 func _physics_process(delta):
 	global_position = lerp(global_position, marble.get_node("MeshInstance3D").global_position,smooth_camera_tolerance)
@@ -27,8 +26,12 @@ func _physics_process(delta):
 	v_rotation.rotation_degrees.x = lerp(v_rotation.rotation_degrees.x, camrot_v, delta * v_acceleration)
 	rotation_degrees.z = 0
 	
+	pass
+	
 func _input(event):
 	if event is InputEventMouseMotion:
 		camrot_h += -event.relative.x * h_sensitivity
 		camrot_v += -event.relative.y * v_sensitivity
+		
+	pass
 

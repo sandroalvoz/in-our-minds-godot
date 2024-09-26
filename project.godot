@@ -23,6 +23,7 @@ SceneManager="*res://addons/scene_manager/scene_manager.tscn"
 Scenes="*res://addons/scene_manager/scenes.gd"
 Gui="*res://Objects/gui.tscn"
 GameManager="*res://Objects/game_manager.tscn"
+PauseMenu="*res://Objects/pause_menu.tscn"
 
 [editor_plugins]
 

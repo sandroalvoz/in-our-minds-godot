@@ -28,9 +28,13 @@ func _ready() -> void:
 	SceneManager.validate_pattern(fade_out_pattern)
 	SceneManager.validate_pattern(fade_in_pattern)
 	
+	pass
+	
 func _on_area_3d_body_entered(body):
 	if body.is_in_group("Player"):
 		if(scene == ""):
 			GameManager._reset_game()
 		else:
 			SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)
+			
+	pass
