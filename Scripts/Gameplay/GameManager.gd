@@ -5,6 +5,8 @@ extends Node
 enum GUI_STATE {ENABLE, DISABLE}
 enum GUI_MODE  {CONTINUE, RESET, STOP}
 
+var is_on_game: bool = false
+
 func _ready():
 	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP)
 	TranslationServer.set_locale("en") # by default the game is 'en'
@@ -13,13 +15,14 @@ func _ready():
 
 func _process(delta):
 	
-	if Input.is_action_just_pressed("exit"):
-		#_reset_game()
-		_freeze_game(true)
-		PauseMenu.visible = true
+	if(is_on_game):
+		if Input.is_action_just_pressed("exit"):
+			#_reset_game()
+			_freeze_game(true)
+			PauseMenu.visible = true
 			
-	if Input.is_action_just_pressed("reload"):
-		_reload_scene()
+		if Input.is_action_just_pressed("reload"):
+			_reload_scene()
 		
 	pass
 	
@@ -33,6 +36,8 @@ func _start_game() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	_update_gui(GUI_STATE.ENABLE, GUI_MODE.RESET) 
+	
+	is_on_game = true
 	
 	pass
 	
@@ -55,6 +60,8 @@ func _reset_game() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP) 
+	
+	is_on_game = false
 	
 	pass
 	
