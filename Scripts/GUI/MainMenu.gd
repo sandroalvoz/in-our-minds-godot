@@ -4,7 +4,7 @@ extends Control
 @onready var btn_exit : Button = $Panel/VBoxContainer/BtnExit
 
 func _on_btn_start_button_down() -> void:
-	GameManager._start_game()
+	GameManager._on_show_chapter_menu()
 	
 	pass
 

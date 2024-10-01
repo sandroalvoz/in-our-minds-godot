@@ -22,6 +22,9 @@ func _process(delta):
 		_reload_scene()
 		
 	pass
+	
+func _on_show_chapter_menu() -> void:
+	SceneManager._change_scene("ChapterMenu", true)
 		
 func _start_game() -> void:
 	SceneManager._current_scene_number = 0

@@ -1,15 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://clsg734308idf"]
+[gd_scene load_steps=2 format=3 uid="uid://knxrfrj74kbm"]
 
-[ext_resource type="Script" path="res://Scripts/GUI/MainMenu.gd" id="1_3nqhb"]
+[ext_resource type="Script" path="res://Scripts/GUI/ChapterMenu.gd" id="1_2ehpc"]
 
-[node name="MainMenu" type="Control"]
+[node name="ChapterMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3nqhb")
+script = ExtResource("1_2ehpc")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -32,13 +32,13 @@ alignment = 1
 
 [node name="LblTitle" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "GAME_TITLE"
+text = "CHAPTER_0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LblVersion" type="Label" parent="Panel/VBoxContainer"]
+[node name="LblDescription" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "v26.09.2024a"
+text = "CHAPTER_0_DESCRIPTION"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -46,14 +46,4 @@ vertical_alignment = 1
 layout_mode = 2
 text = "START_GAME"
 
-[node name="BtnOptions" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
-disabled = true
-text = "GAME_OPTIONS"
-
-[node name="BtnExit" type="Button" parent="Panel/VBoxContainer"]
-layout_mode = 2
-text = "EXIT_GAME"
-
 [connection signal="button_down" from="Panel/VBoxContainer/BtnStart" to="." method="_on_btn_start_button_down"]
-[connection signal="button_down" from="Panel/VBoxContainer/BtnExit" to="." method="_on_btn_exit_button_down"]
