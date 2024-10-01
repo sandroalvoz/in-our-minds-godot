@@ -46,4 +46,7 @@ vertical_alignment = 1
 layout_mode = 2
 text = "START_GAME"
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="button_down" from="Panel/VBoxContainer/BtnStart" to="." method="_on_btn_start_button_down"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
