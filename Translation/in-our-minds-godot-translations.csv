@@ -2,6 +2,11 @@ key,en,es
 GAME_TITLE,In Our Minds: Mental Health and Videogames,In Our Minds: Salud Mental y Videojuegos
 START_GAME,Start Game,Empezar Partida
 GAME_OPTIONS,Options,Opciones
+LANGUAGE_SELECTION,Language Selection,Selección de Idioma
+LANGUAGE_ES,Spanish,Español
+LANGUAGE_EN,English,Inglés
+SCREEN_OPTIONS,Screen Options,Opciones de Pantalla
+FULLSCREEN_MODE,Fullscreen,Pantalla Completa
 EXIT_GAME,Exit Game,Salir del Juego
 PAUSE_GAME,Pause,Pausa
 CONTINUE_GAME,Continue,Continuar

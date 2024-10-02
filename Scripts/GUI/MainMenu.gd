@@ -6,9 +6,12 @@ extends Control
 
 @onready var popup_menu = $Panel/VBoxContainer/BtnOptions/PopupMenu
 
+const FULL_SCREEN_INDEX : int = 4
+
 
 func _ready():
 	popup_menu.hide()
+	_on_fullscreen()
 
 func _on_btn_start_button_down() -> void:
 	GameManager._on_show_chapter_menu()
@@ -25,8 +28,20 @@ func _on_btn_options_button_down() -> void:
 	
 	pass 
 
-func _on_popup_menu_index_pressed(index) -> void:
-	match index:
-		1: TranslationServer.set_locale("en")
-		2: TranslationServer.set_locale("es") 
-	pass 
+#bug: this is colled 2 times. idk why
+func _on_popup_menu_id_pressed(id) -> void:
+		match id:
+			1: TranslationServer.set_locale("en")
+			2: TranslationServer.set_locale("es") 
+			3: _on_fullscreen()
+		pass
+		
+func _on_fullscreen() -> void:
+	if(GameManager.full_screen_mode):
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		popup_menu.set_item_checked(FULL_SCREEN_INDEX, true)		
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		popup_menu.set_item_checked(FULL_SCREEN_INDEX, false)
+
+	!GameManager.full_screen_mode

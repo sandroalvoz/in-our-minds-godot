@@ -6,6 +6,7 @@ enum GUI_STATE {ENABLE, DISABLE}
 enum GUI_MODE  {CONTINUE, RESET, STOP}
 
 var is_on_game: bool = false
+var full_screen_mode: bool = false
 
 func _ready():
 	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP)
@@ -15,6 +16,7 @@ func _ready():
 
 func _process(delta):
 	
+	#bug: if the level is "loading" and user pulse "exit" action. pause menu freeze too.
 	if(is_on_game):
 		if Input.is_action_just_pressed("exit"):
 			#_reset_game()
