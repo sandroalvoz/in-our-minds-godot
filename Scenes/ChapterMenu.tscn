@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://knxrfrj74kbm"]
 
-[ext_resource type="Script" path="res://Scripts/GUI/ChapterMenu.gd" id="1_2ehpc"]
+[ext_resource type="Script" path="res://Scripts/User Interface/ChapterMenu.gd" id="1_2ehpc"]
 
 [node name="ChapterMenu" type="Control"]
 layout_mode = 3

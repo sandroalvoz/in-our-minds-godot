@@ -33,7 +33,7 @@ func _on_show_chapter_menu() -> void:
 		
 func _start_game() -> void:
 	SceneManager._current_scene_number = 0
-	SceneManager._change_scene("Level01", true)
+	SceneManager._change_scene("Level04", true)
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
@@ -100,7 +100,6 @@ func _update_scene_name(current_index : int) -> String:
 		1: return tr("LEVEL_2_NAME")
 		2: return tr("LEVEL_3_NAME")
 		3: return tr("LEVEL_4_NAME")
-		4: return tr("LEVEL_5_NAME")
 	return "null"
 	
 func _freeze_game(state : bool) -> void:
