@@ -5,9 +5,14 @@ extends Control
 @onready var btn_options = $Panel/VBoxContainer/BtnOptions
 
 @onready var popup_menu = $Panel/VBoxContainer/BtnOptions/PopupMenu
+@onready var debug_text_edit = $Panel/DebugTextEdit
 
 const FULL_SCREEN_INDEX : int = 4
 
+func _process(delta):
+	#DEBUG MODE
+	if Input.is_action_just_pressed("DEBUG_MODE"):
+		debug_text_edit.visible = true
 
 func _ready():
 	popup_menu.hide()
@@ -45,3 +50,7 @@ func _on_fullscreen() -> void:
 		popup_menu.set_item_checked(FULL_SCREEN_INDEX, false)
 
 	!GameManager.full_screen_mode
+
+func _on_text_edit_text_changed():
+	GameManager.start_level = debug_text_edit.text
+	pass 

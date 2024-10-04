@@ -8,6 +8,8 @@ enum GUI_MODE  {CONTINUE, RESET, STOP}
 var is_on_game: bool = false
 var full_screen_mode: bool = false
 
+var start_level = "Level01"
+
 func _ready():
 	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP)
 	TranslationServer.set_locale("en") # by default the game is 'en'
@@ -25,7 +27,7 @@ func _process(delta):
 			
 		if Input.is_action_just_pressed("reload"):
 			_reload_scene()
-		
+			
 	pass
 	
 func _on_show_chapter_menu() -> void:
@@ -33,7 +35,7 @@ func _on_show_chapter_menu() -> void:
 		
 func _start_game() -> void:
 	SceneManager._current_scene_number = 0
-	SceneManager._change_scene("Level04", true)
+	SceneManager._change_scene(start_level, true)
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
