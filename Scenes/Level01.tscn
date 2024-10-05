@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="4_jcoow"]
 [ext_resource type="PackedScene" uid="uid://du8na0oacq85n" path="res://Objects/description.tscn" id="4_xmgyh"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="5_x3s58"]
-[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/marble.tscn" id="6_x3lhq"]
+[ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/player.tscn" id="6_x3lhq"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="6_xkndq"]
 [ext_resource type="PackedScene" uid="uid://dhaxydo1yrweq" path="res://Objects/collectible.tscn" id="10_tubrf"]
 
