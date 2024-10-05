@@ -7,6 +7,11 @@ extends Control
 @onready var description_label : Label = $PanelContainer/DescriptionLabel
 @onready var stamina_progress_bar : TextureProgressBar = $PanelContainer/StaminaProgressBar
 
+@onready var collectible_panel = $PanelContainer/CollectiblePanel
+@onready var collectible_description_label = $PanelContainer/CollectiblePanel/CollectibleDescriptionLabel
+
+
+
 func _ready():
 	description_label.visible = false
 	SceneManager.scene_changed.connect(GameManager._on_scene_changed)
@@ -16,6 +21,7 @@ func _ready():
 func _reset_gui() -> void:
 	_show_gui(true)
 	_on_show_description("", false)
+	_on_show_collectible("", false)
 	_on_set_chrono(true)
 	_reset_stamina_progress_bar()
 	
@@ -24,6 +30,7 @@ func _reset_gui() -> void:
 func _stop_gui() -> void:
 	_show_gui(false)
 	_on_show_description("", false)
+	_on_show_collectible("", false)
 	_on_set_chrono(false)
 	_reset_stamina_progress_bar()
 	level_label.text = ""
@@ -39,6 +46,11 @@ func _on_show_description(messg : String, state: bool) -> void:
 	description_label.visible = state
 	description_label.text = messg 
 	
+	pass
+	
+func _on_show_collectible(messg: String, state: bool) -> void:
+	collectible_panel.visible = state
+	collectible_description_label.text = messg
 	pass
 	
 func _on_set_chrono(state : bool) -> void:

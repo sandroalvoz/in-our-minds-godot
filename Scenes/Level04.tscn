@@ -1,4 +1,4 @@
-[gd_scene load_steps=991 format=3 uid="uid://bbjxgr8r3ejyp"]
+[gd_scene load_steps=992 format=3 uid="uid://bbjxgr8r3ejyp"]
 
 [ext_resource type="Texture2D" uid="uid://dpf0sxh7prnsf" path="res://Textures/clouds_puresky.jpg" id="1_yxpfo"]
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/marble.tscn" id="2_qnbwd"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="7_fp2io"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="8_pkvev"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="9_4ywue"]
+[ext_resource type="PackedScene" uid="uid://dhaxydo1yrweq" path="res://Objects/collectible.tscn" id="10_13pra"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3h7iq"]
 panorama = ExtResource("1_yxpfo")
@@ -9940,12 +9941,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0505035, 0.633682, 0.
 description = "[TEXTO 1]"
 
 [node name="Description2" parent="." instance=ExtResource("4_ovq6b")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 18.2369, -2.54695, -2.74479)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 17.5263, -2.54695, -2.74479)
 description = "[TEXTO 2]"
-
-[node name="Description3" parent="." instance=ExtResource("4_ovq6b")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 15.4876, 1.34699, -1.97773)
-description = "[TEXTO 3]"
 
 [node name="Blocking" type="Node" parent="."]
 
@@ -10418,3 +10415,6 @@ mesh_vector_data = SubResource("Resource_8mxyj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7565, -3.0854, -2.74949)
 script = ExtResource("5_cr73q")
 mesh_vector_data = SubResource("Resource_hgpmp")
+
+[node name="Collectible" parent="." instance=ExtResource("10_13pra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8156, -2.54123, -2.03095)

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsb2fgahfqpfg"
-path.s3tc="res://.godot/imported/question-mark.png-ac7772b6dc6cd2246482ad474f07e226.s3tc.ctex"
+uid="uid://80xlvy4itfg6"
+path.s3tc="res://.godot/imported/collectible-sprite.png-7fb700a8c7320c770352a2563db3d97c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/GUI/question-mark.png"
-dest_files=["res://.godot/imported/question-mark.png-ac7772b6dc6cd2246482ad474f07e226.s3tc.ctex"]
+source_file="res://Textures/GUI/collectible-sprite.png"
+dest_files=["res://.godot/imported/collectible-sprite.png-7fb700a8c7320c770352a2563db3d97c.s3tc.ctex"]
 
 [params]
 

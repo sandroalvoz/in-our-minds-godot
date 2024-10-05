@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhaxydo1yrweq"]
+
+[ext_resource type="Script" path="res://Scripts/Gameplay/Collectible.gd" id="1_s46d5"]
+[ext_resource type="Texture2D" uid="uid://80xlvy4itfg6" path="res://Textures/GUI/collectible-sprite.png" id="2_oaoq8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6tgex"]
+radius = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_inn2a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhm8o"]
+transparency = 1
+albedo_texture = ExtResource("2_oaoq8")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+billboard_mode = 1
+billboard_keep_scale = true
+
+[node name="Collectible" type="Node3D"]
+script = ExtResource("1_s46d5")
+description = "¿Sabías que el tipo de apego que desarrollamos en la infancia puede influir en nuestras relaciones de pareja? ¿Has oído hablar del “apego seguro”, “apego evitativo” y “apego ansioso”?En este episodio de 20 minutos, exploramos en profundidad cada uno de ellos para ayudarte a entender mejor cómo tu estilo de apego puede afectar a la forma en la que te vinculas emocionalmente. Además, compartimos contigo algunos tips prácticos que tal vez puedan echarte una mano para construir una relación más sana con tu pareja.Y tú, ¿qué tipo de apego tienes? ¿Y tu pareja? ¿Te gustaría descubrirlo? ¡Dale al PLAY!"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_6tgex")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/CollisionShape3D"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+mesh = SubResource("QuadMesh_inn2a")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_mhm8o")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
