@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/User Interface/ChapterMenu.gd" id="1_2ehpc"]
 
 [node name="ChapterMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,6 +38,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LblDescription" type="Label" parent="Panel/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "CHAPTER_0_DESCRIPTION"
 horizontal_alignment = 1

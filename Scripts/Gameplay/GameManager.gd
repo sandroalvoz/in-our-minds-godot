@@ -1,6 +1,9 @@
 extends Node
 
 @onready var current_level_name: String = ""
+@onready var current_chapter_name: String = ""
+
+var current_chapter_index: int = 0
 
 enum GUI_STATE {ENABLE, DISABLE}
 enum GUI_MODE  {CONTINUE, RESET, STOP}
@@ -8,12 +11,11 @@ enum GUI_MODE  {CONTINUE, RESET, STOP}
 var is_on_game: bool = false
 var full_screen_mode: bool = false
 
-var start_level = "Level01"
 
 func _ready():
 	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP)
 	TranslationServer.set_locale("en") # by default the game is 'en'
-	
+		
 	pass
 
 func _process(delta):
@@ -32,16 +34,31 @@ func _process(delta):
 	
 func _on_show_chapter_menu() -> void:
 	SceneManager._change_scene("ChapterMenu", true)
-		
-func _start_game() -> void:
+	
+	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP)
+	
+	pass
+	
+func _start_game() -> void:	
 	SceneManager._current_scene_number = 0
-	SceneManager._change_scene(start_level, true)
+	
+	current_chapter_index = 0
+	
+	SceneManager._change_scene(_next_chapter_scene(), true)
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	_update_gui(GUI_STATE.ENABLE, GUI_MODE.RESET) 
 	
 	is_on_game = true
+	
+	pass
+	
+func _next_chapter_scene() -> String:
+	match current_chapter_index:
+		0: return "Level01"
+		1: return "Level04"
+	return "null"
 	
 	pass
 	
@@ -103,6 +120,21 @@ func _update_scene_name(current_index : int) -> String:
 		2: return tr("LEVEL_3_NAME")
 		3: return tr("LEVEL_4_NAME")
 	return "null"
+	
+	pass
+	
+
+func _update_chapter_name() -> String:
+	match current_chapter_index:
+		0: 
+			current_chapter_index+=1
+			return tr("CHAPTER_0") 
+		1: 
+			current_chapter_index+=1
+			return tr("CHAPTER_1")
+	return "null"
+	
+	pass
 	
 func _freeze_game(state : bool) -> void:
 	get_tree().paused = state
