@@ -78,7 +78,6 @@ layout_mode = 2
 text = "EXIT_GAME"
 
 [node name="DebugTextEdit" type="TextEdit" parent="Panel"]
-visible = false
 layout_mode = 0
 offset_right = 248.0
 offset_bottom = 99.0
