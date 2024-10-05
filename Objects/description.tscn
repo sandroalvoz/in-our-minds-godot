@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://du8na0oacq85n"]
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Description.gd" id="1_3mdlr"]
-[ext_resource type="Texture2D" uid="uid://dsb2fgahfqpfg" path="res://Textures/GUI/description-sprite.png" id="2_opfhn"]
+[ext_resource type="Texture2D" uid="uid://dsb2fgahfqpfg" path="res://Textures/GUI/description_sprite.png" id="2_opfhn"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6tgex"]
 radius = 1.0

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpf0sxh7prnsf"
-path.s3tc="res://.godot/imported/clouds_puresky.jpg-c1f452f6384bfac4691b11dfb41d587d.s3tc.ctex"
+uid="uid://ca3dcc6bb5n75"
+path.s3tc="res://.godot/imported/goal_texture.jpg-da7735ca7a7ac152b17d47de380730d8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/clouds_puresky.jpg"
-dest_files=["res://.godot/imported/clouds_puresky.jpg-c1f452f6384bfac4691b11dfb41d587d.s3tc.ctex"]
+source_file="res://Textures/Objects/goal_texture.jpg"
+dest_files=["res://.godot/imported/goal_texture.jpg-da7735ca7a7ac152b17d47de380730d8.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deeh473oh70ol"
-path.s3tc="res://.godot/imported/clear_puresky.jpg-5d109c96d17dcb1ba28fa73f3e906dad.s3tc.ctex"
+uid="uid://b2hoir7vhci74"
+path.s3tc="res://.godot/imported/block_texture_02.png-8cd671d200e4f8c47deac327bf49891f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/clear_puresky.jpg"
-dest_files=["res://.godot/imported/clear_puresky.jpg-5d109c96d17dcb1ba28fa73f3e906dad.s3tc.ctex"]
+source_file="res://Textures/Blocks/block_texture_02.png"
+dest_files=["res://.godot/imported/block_texture_02.png-8cd671d200e4f8c47deac327bf49891f.s3tc.ctex"]
 
 [params]
 
