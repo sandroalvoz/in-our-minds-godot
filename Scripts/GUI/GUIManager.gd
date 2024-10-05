@@ -13,7 +13,6 @@ extends Control
 
 
 func _ready():
-	description_label.visible = false
 	SceneManager.scene_changed.connect(GameManager._on_scene_changed)
 	
 	pass
@@ -33,7 +32,6 @@ func _stop_gui() -> void:
 	_on_show_collectible("", false)
 	_on_set_chrono(false)
 	_reset_stamina_progress_bar()
-	level_label.text = ""
 	
 	pass
 	

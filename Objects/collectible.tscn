@@ -18,7 +18,6 @@ billboard_keep_scale = true
 
 [node name="Collectible" type="Node3D"]
 script = ExtResource("1_s46d5")
-description = "¿Sabías que el tipo de apego que desarrollamos en la infancia puede influir en nuestras relaciones de pareja? ¿Has oído hablar del “apego seguro”, “apego evitativo” y “apego ansioso”?En este episodio de 20 minutos, exploramos en profundidad cada uno de ellos para ayudarte a entender mejor cómo tu estilo de apego puede afectar a la forma en la que te vinculas emocionalmente. Además, compartimos contigo algunos tips prácticos que tal vez puedan echarte una mano para construir una relación más sana con tu pareja.Y tú, ¿qué tipo de apego tienes? ¿Y tu pareja? ¿Te gustaría descubrirlo? ¡Dale al PLAY!"
 
 [node name="Area3D" type="Area3D" parent="."]
 

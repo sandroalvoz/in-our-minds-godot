@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cr03r0scljmbw"]
+[gd_scene load_steps=28 format=3 uid="uid://cr03r0scljmbw"]
 
 [ext_resource type="Texture2D" uid="uid://dpf0sxh7prnsf" path="res://Textures/clouds_puresky.jpg" id="1_8qvdq"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="2_qeyba"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_int.gd" id="5_x3s58"]
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Objects/marble.tscn" id="6_x3lhq"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="6_xkndq"]
+[ext_resource type="PackedScene" uid="uid://dhaxydo1yrweq" path="res://Objects/collectible.tscn" id="10_tubrf"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3h7iq"]
 panorama = ExtResource("1_8qvdq")
@@ -181,3 +182,6 @@ description = "LEVEL_1_DESCRIPTION"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.704787, -0.512979)
 script = ExtResource("2_qeyba")
 mesh_vector_data = SubResource("Resource_7po5b")
+
+[node name="Collectible" parent="." instance=ExtResource("10_tubrf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.269976, 0.758337, 0.0245453)
