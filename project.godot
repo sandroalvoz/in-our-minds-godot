@@ -11,19 +11,19 @@ config_version=5
 [application]
 
 config/name="In our Minds"
-run/main_scene="res://Scenes/MainMenu.tscn"
+run/main_scene="res://Scenes/Screens/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
-DrawLine3d="*res://Objects/Legacy/DrawLine3D.gd"
+DrawLine3d="*res://Scenes/Objects/Legacy/DrawLine3D.gd"
 SceneManager="*res://addons/scene_manager/scene_manager.tscn"
 Scenes="*res://addons/scene_manager/scenes.gd"
-Gui="*res://Objects/Autoload/gui.tscn"
-GameManager="*res://Objects/Autoload/game_manager.tscn"
-PauseMenu="*res://Objects/Autoload/pause_menu.tscn"
+Gui="*res://Scenes/Objects/Autoload/gui.tscn"
+GameManager="*res://Scenes/Objects/Autoload/game_manager.tscn"
+PauseMenu="*res://Scenes/Objects/Autoload/pause_menu.tscn"
 
 [editor_plugins]
 

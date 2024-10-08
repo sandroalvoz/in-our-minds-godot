@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var scene: String
+@export var next_scene_is_chapter_menu : bool = false
 @export var fade_out_speed: float = 1.0
 @export var fade_in_speed: float = 1.0
 @export var fade_out_pattern: String = "fade"
@@ -30,11 +31,20 @@ func _ready() -> void:
 	
 	pass
 	
-func _on_area_3d_body_entered(body):
+func _on_area_3d_body_entered(body) -> void:
 	if body.is_in_group("Player"):
-		if(scene == ""):
+		_go_next_level()
+			
+	pass
+	
+func _go_next_level() -> void:
+	if(next_scene_is_chapter_menu): 
+			GameManager._on_show_chapter_menu()  # next scene is shows chapter menu
+			pass
+	else:	
+		if(scene == ""): #if there is not scene set, reset the game (provisional)
 			GameManager._reset_game()
-		else:
+		else: # change to a new scene and set the mouse options
 			SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			

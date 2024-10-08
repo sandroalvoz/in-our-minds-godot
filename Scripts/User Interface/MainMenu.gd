@@ -2,24 +2,30 @@ extends Control
 
 @onready var btn_start : Button = $Panel/VBoxContainer/BtnStart
 @onready var btn_exit : Button = $Panel/VBoxContainer/BtnExit
-@onready var btn_options = $Panel/VBoxContainer/BtnOptions
+@onready var btn_options : Button = $Panel/VBoxContainer/BtnOptions
 
-@onready var popup_menu = $Panel/VBoxContainer/BtnOptions/PopupMenu
-@onready var debug_text_edit = $Panel/DebugTextEdit
+@onready var popup_menu : PopupMenu = $Panel/VBoxContainer/BtnOptions/PopupMenu
+
+@onready var debug_next_level : TextEdit = $Panel/DebugTextEdit
+@onready var on_debug_mode : bool = false
 
 const FULL_SCREEN_INDEX : int = 4
 
 func _process(delta):
-	#DEBUG MODE
+	#debug mode
 	if Input.is_action_just_pressed("DEBUG_MODE"):
-		debug_text_edit.visible = true
+		debug_next_level.visible = true
+		on_debug_mode = true
 
 func _ready():
 	popup_menu.hide()
 	_on_fullscreen()
 
 func _on_btn_start_button_down() -> void:
-	GameManager._on_show_chapter_menu()
+	if(on_debug_mode): # debug mode
+		GameManager._start_game(debug_next_level.text)
+	else:
+		GameManager._on_show_chapter_menu()
 	
 	pass
 
@@ -50,7 +56,3 @@ func _on_fullscreen() -> void:
 		popup_menu.set_item_checked(FULL_SCREEN_INDEX, false)
 
 	!GameManager.full_screen_mode
-
-func _on_text_edit_text_changed():
-	GameManager.start_level = debug_text_edit.text
-	pass 

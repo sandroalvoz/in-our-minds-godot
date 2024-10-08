@@ -1,9 +1,8 @@
 extends Node
 
 @onready var current_level_name: String = ""
-@onready var current_chapter_name: String = ""
 
-var current_chapter_index: int = 0
+var current_chapter_index: int = -1
 
 enum GUI_STATE {ENABLE, DISABLE}
 enum GUI_MODE  {CONTINUE, RESET, STOP}
@@ -13,7 +12,7 @@ var full_screen_mode: bool = false
 
 
 func _ready():
-	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP)
+	_reset_game()
 	TranslationServer.set_locale("en") # by default the game is 'en'
 		
 	pass
@@ -33,31 +32,37 @@ func _process(delta):
 	pass
 	
 func _on_show_chapter_menu() -> void:
-	SceneManager._change_scene("ChapterMenu", true)
+	SceneManager._change_scene("ChapterMenu" + str(current_chapter_index), true)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
-	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP)
+	_on_chapter_changed()
+	
+	is_on_game = false
 	
 	pass
 	
-func _start_game() -> void:	
-	SceneManager._current_scene_number = 0
+func _on_chapter_changed() -> void:
+	current_chapter_index += 1
+	_update_gui(GUI_STATE.DISABLE, GUI_MODE.STOP) 
 	
-	current_chapter_index = 0
+	pass
 	
-	SceneManager._change_scene(_next_chapter_scene(), true)
+func _start_game(scene : String) -> void:	
+	SceneManager._change_scene(scene, true)	
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)	
 	
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
-	_update_gui(GUI_STATE.ENABLE, GUI_MODE.RESET) 
+	_on_scene_changed()
 	
 	is_on_game = true
 	
 	pass
 	
-func _next_chapter_scene() -> String:
-	match current_chapter_index:
-		0: return "Level01"
-		1: return "Level04"
+func _update_scene_name(current_index : int) -> String:
+	match current_index:
+		0: return tr("LEVEL_1_NAME")
+		1: return tr("LEVEL_2_NAME")
+		2: return tr("LEVEL_3_NAME")
+		3: return tr("LEVEL_4_NAME")
 	return "null"
 	
 	pass
@@ -75,7 +80,10 @@ func _reload_scene() -> void:
 	pass
 	
 func _reset_game() -> void:
-	SceneManager._current_scene_number = 0
+	current_level_name = ""
+	current_chapter_index  = 0
+	
+	SceneManager._current_scene_number = -1
 	SceneManager._change_scene("MainMenu", true)
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -113,28 +121,6 @@ func _update_gui(state : int, mode : int) -> void:
 			
 	pass
 	
-func _update_scene_name(current_index : int) -> String:
-	match current_index:
-		0: return tr("LEVEL_1_NAME")
-		1: return tr("LEVEL_2_NAME")
-		2: return tr("LEVEL_3_NAME")
-		3: return tr("LEVEL_4_NAME")
-	return "null"
-	
-	pass
-	
-
-func _update_chapter_name() -> String:
-	match current_chapter_index:
-		0: 
-			current_chapter_index+=1
-			return tr("CHAPTER_0") 
-		1: 
-			current_chapter_index+=1
-			return tr("CHAPTER_1")
-	return "null"
-	
-	pass
 	
 func _freeze_game(state : bool) -> void:
 	get_tree().paused = state

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://knxrfrj74kbm"]
+[gd_scene load_steps=2 format=3 uid="uid://ntwsw6a6vouq"]
 
-[ext_resource type="Script" path="res://Scripts/User Interface/ChapterMenu.gd" id="1_2ehpc"]
+[ext_resource type="Script" path="res://Scripts/User Interface/ChapterMenu.gd" id="1_ai25w"]
 
 [node name="ChapterMenu" type="Control"]
 process_mode = 3
@@ -10,7 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_2ehpc")
+script = ExtResource("1_ai25w")
+scene = "Level04"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -33,9 +34,10 @@ alignment = 1
 
 [node name="LblTitle" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "CHAPTER_0"
+text = "CHAPTER_1"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="LblDescription" type="Label" parent="Panel/VBoxContainer"]
 visible = false

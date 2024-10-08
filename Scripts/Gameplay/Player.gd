@@ -54,8 +54,9 @@ func handle_impulse() -> void:
 		Engine.time_scale = slowdown_factor
 	
 	if Input.is_action_just_released("impulse"):
-		Engine.time_scale = original_time_scale
 		if(Gui._consume_stamina_progress_bar()):
+			Engine.time_scale = original_time_scale
+			
 			var camera_transform = camera_3d.get_camera_transform()
 			var forward_direction = -camera_transform.basis.z.normalized()  
 		
