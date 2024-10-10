@@ -19,7 +19,7 @@ func _process(delta):
 
 func _ready():
 	popup_menu.hide()
-	_on_fullscreen()
+	#_on_fullscreen()
 
 func _on_btn_start_button_down() -> void:
 	if(on_debug_mode): # debug mode
@@ -39,7 +39,6 @@ func _on_btn_options_button_down() -> void:
 	
 	pass 
 
-#bug: this is colled 2 times. idk why
 func _on_popup_menu_id_pressed(id) -> void:
 		match id:
 			1: TranslationServer.set_locale("en")
@@ -49,10 +48,12 @@ func _on_popup_menu_id_pressed(id) -> void:
 		
 func _on_fullscreen() -> void:
 	if(GameManager.full_screen_mode):
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-		popup_menu.set_item_checked(FULL_SCREEN_INDEX, true)		
-	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		popup_menu.set_item_checked(FULL_SCREEN_INDEX, false)
-
-	!GameManager.full_screen_mode
+		GameManager.full_screen_mode = false
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		popup_menu.set_item_checked(FULL_SCREEN_INDEX, true)
+		GameManager.full_screen_mode = true
+	
+	pass

@@ -38,7 +38,7 @@ vertical_alignment = 1
 
 [node name="LblVersion" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "v02.10.2024a"
+text = "v10.10.2024a"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -51,7 +51,6 @@ layout_mode = 2
 text = "GAME_OPTIONS"
 
 [node name="PopupMenu" type="PopupMenu" parent="Panel/VBoxContainer/BtnOptions"]
-initial_position = 1
 size = Vector2i(450, 200)
 visible = true
 min_size = Vector2i(450, 200)
@@ -87,5 +86,4 @@ placeholder_text = "Level01"
 [connection signal="button_down" from="Panel/VBoxContainer/BtnStart" to="." method="_on_btn_start_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnOptions" to="." method="_on_btn_options_button_down"]
 [connection signal="id_pressed" from="Panel/VBoxContainer/BtnOptions/PopupMenu" to="." method="_on_popup_menu_id_pressed"]
-[connection signal="popup_hide" from="Panel/VBoxContainer/BtnOptions/PopupMenu" to="." method="_on_popup_menu_popup_hide"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnExit" to="." method="_on_btn_exit_button_down"]

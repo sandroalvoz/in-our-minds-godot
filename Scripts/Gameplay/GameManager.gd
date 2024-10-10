@@ -12,8 +12,8 @@ var full_screen_mode: bool = false
 
 
 func _ready():
-	_reset_game()
 	TranslationServer.set_locale("en") # by default the game is 'en'
+	_reset_game()
 		
 	pass
 
