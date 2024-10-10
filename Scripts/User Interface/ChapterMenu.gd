@@ -32,8 +32,14 @@ func _on_btn_start_button_down() -> void:
 	
 	pass
 
+func _on_btn_exit_button_down():
+	GameManager._reset_game()
+	pass 
+	
 func _on_timer_timeout() -> void:
 	timer.stop()
 	btn_start.visible = true
 	
 	pass
+
+
