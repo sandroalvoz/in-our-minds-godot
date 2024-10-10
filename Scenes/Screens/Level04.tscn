@@ -1,6 +1,6 @@
 [gd_scene load_steps=1239 format=3 uid="uid://bbjxgr8r3ejyp"]
 
-[ext_resource type="Texture2D" uid="uid://deeh473oh70ol" path="res://Textures/Skybox/clear_puresky.jpg" id="1_p5fit"]
+[ext_resource type="Texture2D" uid="uid://sl5bqc18e8jr" path="res://Textures/Skybox/AllSky_Overcast4_Low.png" id="1_dbhe3"]
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Scenes/Objects/player.tscn" id="2_kc8kv"]
 [ext_resource type="PackedScene" uid="uid://d22r677i78v52" path="res://Scenes/Objects/goal.tscn" id="3_pddbl"]
 [ext_resource type="PackedScene" uid="uid://du8na0oacq85n" path="res://Scenes/Objects/description.tscn" id="4_3ylt5"]
@@ -13,16 +13,16 @@
 [ext_resource type="Material" uid="uid://c8omxgn7j5sxh" path="res://Materials/ground_04.tres" id="11_iosf3"]
 [ext_resource type="PackedScene" uid="uid://dhaxydo1yrweq" path="res://Scenes/Objects/collectible.tscn" id="12_ryavi"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3h7iq"]
-panorama = ExtResource("1_p5fit")
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3pyu6"]
+panorama = ExtResource("1_dbhe3")
 
-[sub_resource type="Sky" id="Sky_0oqxh"]
-sky_material = SubResource("PanoramaSkyMaterial_3h7iq")
+[sub_resource type="Sky" id="Sky_ks2gf"]
+sky_material = SubResource("PanoramaSkyMaterial_3pyu6")
 
 [sub_resource type="Environment" id="Environment_g5eta"]
 background_mode = 2
 background_color = Color(0.240803, 0.30369, 0.364669, 1)
-sky = SubResource("Sky_0oqxh")
+sky = SubResource("Sky_ks2gf")
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ac1u7"]
 
@@ -12361,9 +12361,8 @@ scene = "Level02"
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0505035, 0.633682, 0.0222982)
 description = "[TEXTO 1]"
 
-[node name="Description2" parent="." instance=ExtResource("4_3ylt5")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 17.5263, -2.54695, -2.74479)
-description = "[TEXTO 2]"
+[node name="Collectible" parent="." instance=ExtResource("12_ryavi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8156, -2.54123, -2.03095)
 
 [node name="Blocking" type="Node" parent="."]
 
@@ -12930,6 +12929,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7565, -3.0854, -2.74949)
 script = ExtResource("5_5cbk6")
 mesh_vector_data = SubResource("Resource_maeag")
 materials = Array[Material]([ExtResource("10_6g2tv")])
-
-[node name="Collectible" parent="." instance=ExtResource("12_ryavi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8156, -2.54123, -2.03095)

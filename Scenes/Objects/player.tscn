@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/Gameplay/Player.gd" id="1_4tf07"]
 [ext_resource type="Script" path="res://Scripts/Gameplay/Camera.gd" id="1_d1vl8"]
-[ext_resource type="Texture2D" uid="uid://byumbe7634c1s" path="res://Textures/Objects/MiedoAislamiento_ball_texture.png" id="2_75jw4"]
+[ext_resource type="Texture2D" uid="uid://byumbe7634c1s" path="res://Textures/Player/MiedoAislamiento_ball_texture.png" id="2_75jw4"]
 [ext_resource type="Texture2D" uid="uid://cwkkglrbo53nc" path="res://icon.svg" id="2_qcvt7"]
-[ext_resource type="Texture2D" uid="uid://c6qftotxfv3y4" path="res://Textures/Objects/MiedoAislamiento__texture.png" id="4_anjt4"]
+[ext_resource type="Texture2D" uid="uid://c6qftotxfv3y4" path="res://Textures/Player/MiedoAislamiento__texture.png" id="4_anjt4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qcqbx"]
 bounce = 0.5
