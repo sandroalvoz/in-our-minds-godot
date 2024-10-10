@@ -49,16 +49,21 @@ func movement(delta) -> void:
 	apply_central_force(direction_h * movement_speed * delta)
 	pass
 	
+var is_holding_impulse = false
 func handle_impulse() -> void:
-	if Input.is_action_pressed("impulse"):
-		Engine.time_scale = slowdown_factor
+	if Input.is_action_just_pressed("impulse"):
+		if(Gui._consume_stamina_progress_bar()):
+			Engine.time_scale = slowdown_factor
+			is_holding_impulse = true
 	
 	if Input.is_action_just_released("impulse"):
-		if(Gui._consume_stamina_progress_bar()):
+		if(is_holding_impulse):
 			Engine.time_scale = original_time_scale
 			
 			var camera_transform = camera_3d.get_camera_transform()
 			var forward_direction = -camera_transform.basis.z.normalized()  
+			
+			is_holding_impulse = false
 		
 			apply_impulse(forward_direction * impulse_force)
 		else:

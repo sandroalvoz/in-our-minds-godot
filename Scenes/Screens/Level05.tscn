@@ -170,6 +170,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69074, 0.788564, -0.035139
 [node name="Goal" parent="." instance=ExtResource("3_eiebw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.80701, 0.352964, 0)
 top_level = false
+next_scene_is_chapter_menu = true
 
 [node name="Description" parent="." instance=ExtResource("4_shvsd")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.17656, 0.674073, -0.036)
