@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://d4n3jrsf5mklr"]
+[gd_scene load_steps=8 format=3 uid="uid://d4n3jrsf5mklr"]
 
 [ext_resource type="Script" path="res://Scripts/GUI/GUIManager.gd" id="1_80t64"]
 [ext_resource type="Script" path="res://Scripts/GUI/Chrono.gd" id="1_01880"]
 [ext_resource type="Texture2D" uid="uid://lkr8evcgvegh" path="res://Textures/GUI/StaminaBar/stamina-0.png" id="3_chd1m"]
 [ext_resource type="Texture2D" uid="uid://dhegpra18wus4" path="res://Textures/GUI/StaminaBar/stamina-100.png" id="4_lngnv"]
-[ext_resource type="Texture2D" uid="uid://80xlvy4itfg6" path="res://Textures/Objects/collectible_sprite.png" id="5_ximdk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n2582"]
 line_spacing = 1.0
@@ -77,43 +76,17 @@ value = 1.0
 texture_over = ExtResource("3_chd1m")
 texture_progress = ExtResource("4_lngnv")
 
-[node name="CollectiblePanel" type="Panel" parent="PanelContainer"]
-self_modulate = Color(1, 1, 1, 0.352941)
-clip_contents = true
-layout_mode = 2
+[node name="CollectiblePopupMenu" type="PopupMenu" parent="PanelContainer"]
+initial_position = 1
+size = Vector2i(300, 100)
+visible = true
+item_count = 3
+item_0/text = "COLLECTIBLE_POPUP"
+item_0/id = 0
+item_0/separator = true
+item_1/text = "COLLECTIBLE_YES"
+item_1/id = 1
+item_2/text = "COLLECTIBLE_NO"
+item_2/id = 2
 
-[node name="CollectibleDescriptionLabel" type="Label" parent="PanelContainer/CollectiblePanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.05
-anchor_right = 0.5
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 8
-text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\""
-label_settings = SubResource("LabelSettings_1uukh")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/CollectiblePanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.6
-anchor_top = 0.25
-anchor_right = 0.9
-anchor_bottom = 0.75
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_ximdk")
-expand_mode = 1
-
-[node name="LinkButton" type="LinkButton" parent="PanelContainer/CollectiblePanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-uri = "https://entiendetumente.info/"
+[connection signal="id_pressed" from="PanelContainer/CollectiblePopupMenu" to="." method="_on_popup_menu_id_pressed"]

@@ -1,6 +1,5 @@
-[gd_scene load_steps=78 format=3 uid="uid://bjben8c65s0c7"]
+[gd_scene load_steps=77 format=3 uid="uid://bjben8c65s0c7"]
 
-[ext_resource type="Texture2D" uid="uid://dpf0sxh7prnsf" path="res://Textures/Skybox/clouds_puresky.jpg" id="1_yxpfo"]
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Scenes/Objects/player.tscn" id="2_qnbwd"]
 [ext_resource type="PackedScene" uid="uid://d22r677i78v52" path="res://Scenes/Objects/goal.tscn" id="3_v4e4y"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="5_cr73q"]
@@ -10,7 +9,6 @@
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/mesh_vector_data.gd" id="9_4ywue"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3h7iq"]
-panorama = ExtResource("1_yxpfo")
 
 [sub_resource type="Sky" id="Sky_0oqxh"]
 sky_material = SubResource("PanoramaSkyMaterial_3h7iq")
@@ -692,7 +690,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69074, 0.788564, -0.035139
 [node name="Goal" parent="." instance=ExtResource("3_v4e4y")]
 transform = Transform3D(-0.999276, 0, -0.0380564, 0, 1, 0, 0.0380564, 0, -0.999276, -2.68341, -4.6626, -0.2685)
 top_level = false
-scene = "Level05"
 
 [node name="Blocking" type="Node" parent="."]
 

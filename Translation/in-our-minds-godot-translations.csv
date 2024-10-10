@@ -10,6 +10,9 @@ FULLSCREEN_MODE,Fullscreen,Pantalla Completa
 EXIT_GAME,Exit Game,Salir del Juego
 PAUSE_GAME,Pause,Pausa
 CONTINUE_GAME,Continue,Continuar
+COLLECTIBLE_POPUP, Do you want to open the resource?, ¿Quieres abrir el recurso?
+COLLECTIBLE_YES, Yes, Si
+COLLECTIBLE_NO, No, No 
 EXIT_MAIN_MENU,Exit to Main Menu,Salir al Menu Principal
 LEVEL_1_NAME,Basic Movement,Movimiento Básico
 LEVEL_2_NAME,Basic Camera Turn,Movimiento Básico de Cámara

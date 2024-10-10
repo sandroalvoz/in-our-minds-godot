@@ -51,7 +51,7 @@ layout_mode = 2
 text = "GAME_OPTIONS"
 
 [node name="PopupMenu" type="PopupMenu" parent="Panel/VBoxContainer/BtnOptions"]
-initial_position = 2
+initial_position = 1
 size = Vector2i(450, 200)
 visible = true
 min_size = Vector2i(450, 200)

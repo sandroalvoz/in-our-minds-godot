@@ -6,10 +6,10 @@ extends Control
 @onready var level_label: Label = $PanelContainer/VBoxContainer/LevelLabel
 @onready var description_label : Label = $PanelContainer/DescriptionLabel
 @onready var stamina_progress_bar : TextureProgressBar = $PanelContainer/StaminaProgressBar
+@onready var collectible_popup_menu : PopupMenu = $PanelContainer/CollectiblePopupMenu
 
-@onready var collectible_panel = $PanelContainer/CollectiblePanel
-@onready var collectible_description_label = $PanelContainer/CollectiblePanel/CollectibleDescriptionLabel
 
+var action_popup_url : String = "https://entiendetumente.info/"
 
 
 func _ready():
@@ -46,9 +46,13 @@ func _on_show_description(messg : String, state: bool) -> void:
 	
 	pass
 	
-func _on_show_collectible(messg: String, state: bool) -> void:
-	collectible_panel.visible = state
-	collectible_description_label.text = messg
+func _on_show_collectible(url : String, state: bool) -> void:
+	if(state): 
+		collectible_popup_menu.show()
+		action_popup_url += url
+	else: 
+		collectible_popup_menu.hide()
+	
 	pass
 	
 func _on_set_chrono(state : bool) -> void:
@@ -71,3 +75,14 @@ func _reset_stamina_progress_bar() -> void:
 	stamina_progress_bar.value = stamina_progress_bar.max_value
 	
 	pass
+
+func _on_popup_menu_id_pressed(id):
+	match(id):
+		1: 
+			OS.shell_open(action_popup_url)
+		2: 
+			_on_show_collectible("", false)
+		
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		
+	pass 
