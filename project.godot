@@ -25,6 +25,11 @@ Gui="*res://Scenes/Objects/Autoload/gui.tscn"
 GameManager="*res://Scenes/Objects/Autoload/game_manager.tscn"
 PauseMenu="*res://Scenes/Objects/Autoload/pause_menu.tscn"
 
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=720
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg", "res://addons/scene_manager/plugin.cfg")
