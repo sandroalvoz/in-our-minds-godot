@@ -1,9 +1,10 @@
-[gd_scene load_steps=781 format=3 uid="uid://b2uhwrvlemfyi"]
+[gd_scene load_steps=782 format=3 uid="uid://b2uhwrvlemfyi"]
 
 [ext_resource type="Texture2D" uid="uid://dskx7olfigtja" path="res://Textures/Skybox/Cold Sunset Equirect.png" id="1_ijl0f"]
 [ext_resource type="PackedScene" uid="uid://bu6csgumns604" path="res://Scenes/Objects/player.tscn" id="2_j2ltc"]
 [ext_resource type="PackedScene" uid="uid://d22r677i78v52" path="res://Scenes/Objects/goal.tscn" id="3_eiebw"]
 [ext_resource type="PackedScene" uid="uid://du8na0oacq85n" path="res://Scenes/Objects/description.tscn" id="4_shvsd"]
+[ext_resource type="PackedScene" uid="uid://dhaxydo1yrweq" path="res://Scenes/Objects/collectible.tscn" id="5_p6vjb"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="5_xq2x3"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_byte.gd" id="6_04y3o"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/resources/data_vector_float.gd" id="7_m48rc"]
@@ -7765,13 +7766,16 @@ camera_attributes = SubResource("CameraAttributesPractical_ac1u7")
 transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 20.9874, 0.255216, 10.6195)
 
 [node name="Goal" parent="." instance=ExtResource("3_eiebw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.7167, 6.092, 4.26949)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 18.7167, 6.092, 4.26949)
 top_level = false
 next_scene_is_chapter_menu = true
 
 [node name="Description" parent="." instance=ExtResource("4_shvsd")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 15.1632, -0.53551, 8.0962)
 description = "LEVEL_1_DESCRIPTION"
+
+[node name="Collectible" parent="." instance=ExtResource("5_p6vjb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4127, 3.13542, 10.9053)
 
 [node name="Blocking" type="Node" parent="."]
 
