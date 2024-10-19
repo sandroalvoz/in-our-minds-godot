@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/GUI/GUIManager.gd" id="1_80t64"]
 [ext_resource type="Script" path="res://Scripts/GUI/Chrono.gd" id="1_01880"]
-[ext_resource type="Texture2D" uid="uid://lkr8evcgvegh" path="res://Textures/GUI/StaminaBar/stamina-0.png" id="3_chd1m"]
-[ext_resource type="Texture2D" uid="uid://dhegpra18wus4" path="res://Textures/GUI/StaminaBar/stamina-100.png" id="4_lngnv"]
+[ext_resource type="Texture2D" uid="uid://lkr8evcgvegh" path="res://Textures/User Interface/StaminaBar/stamina-0.png" id="3_chd1m"]
+[ext_resource type="Texture2D" uid="uid://dhegpra18wus4" path="res://Textures/User Interface/StaminaBar/stamina-100.png" id="4_lngnv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n2582"]
 line_spacing = 1.0
