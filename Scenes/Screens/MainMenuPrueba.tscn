@@ -1,15 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://clsg734308idf"]
+[gd_scene load_steps=3 format=3 uid="uid://6q6oq1m1p8to"]
 
-[ext_resource type="Script" path="res://Scripts/User Interface/MainMenu.gd" id="1_3nqhb"]
+[ext_resource type="Script" path="res://Scripts/User Interface/MainMenuPrueba.gd" id="1_u67y5"]
+[ext_resource type="PackedScene" uid="uid://co66ka7y6etut" path="res://Scenes/Screens/options_menuPrueba.tscn" id="2_6vyjm"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenuPrueba" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3nqhb")
+script = ExtResource("1_u67y5")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -32,7 +33,8 @@ alignment = 1
 
 [node name="LblTitle" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-text = "GAME_TITLE"
+text = "GAME_TITLE
+a"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -50,33 +52,16 @@ text = "START_GAME"
 layout_mode = 2
 text = "GAME_OPTIONS"
 
-[node name="PopupMenu" type="PopupMenu" parent="Panel/VBoxContainer/BtnOptions"]
-size = Vector2i(450, 200)
-visible = true
-min_size = Vector2i(450, 200)
-max_size = Vector2i(450, 200)
-content_scale_aspect = 4
-allow_search = false
-item_count = 6
-item_0/text = "LANGUAGE_SELECTION"
-item_0/id = 0
-item_0/separator = true
-item_1/text = "LANGUAGE_EN"
-item_1/id = 1
-item_2/text = "LANGUAGE_ES"
-item_2/id = 2
-item_3/text = "SCREEN_OPTIONS"
-item_3/id = 0
-item_3/separator = true
-item_4/text = "FULLSCREEN_MODE"
-item_4/checkable = 1
-item_4/id = 3
-item_5/text = ""
-item_5/id = 5
-
 [node name="BtnExit" type="Button" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "EXIT_GAME"
+
+[node name="LblTitle2" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "GAME_TITLE
+a"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DebugTextEdit" type="TextEdit" parent="Panel"]
 visible = false
@@ -85,9 +70,11 @@ offset_right = 248.0
 offset_bottom = 99.0
 placeholder_text = "Level01"
 
-[node name="PopupMenu" type="PopupMenu" parent="."]
+[node name="OptionsMenu" parent="Panel" instance=ExtResource("2_6vyjm")]
+visible = false
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="Panel/VBoxContainer/BtnStart" to="." method="_on_btn_start_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnOptions" to="." method="_on_btn_options_button_down"]
-[connection signal="id_pressed" from="Panel/VBoxContainer/BtnOptions/PopupMenu" to="." method="_on_popup_menu_id_pressed"]
 [connection signal="button_down" from="Panel/VBoxContainer/BtnExit" to="." method="_on_btn_exit_button_down"]
