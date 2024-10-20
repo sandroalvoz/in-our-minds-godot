@@ -1,16 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://6q6oq1m1p8to"]
 
-[ext_resource type="Script" path="res://Scripts/User Interface/MainMenuPrueba.gd" id="1_u67y5"]
-[ext_resource type="PackedScene" uid="uid://co66ka7y6etut" path="res://Scenes/Screens/options_menuPrueba.tscn" id="2_6vyjm"]
+[ext_resource type="Script" path="res://Scripts/User Interface/MainMenu_PR.gd" id="1_rtrl6"]
+[ext_resource type="PackedScene" uid="uid://co66ka7y6etut" path="res://Scenes/Screens/OptionsMenu.tscn" id="2_1gk1h"]
 
-[node name="MainMenuPrueba" type="Control"]
+[node name="MainMenu_PR" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_u67y5")
+script = ExtResource("1_rtrl6")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -70,7 +70,7 @@ offset_right = 248.0
 offset_bottom = 99.0
 placeholder_text = "Level01"
 
-[node name="OptionsMenu" parent="Panel" instance=ExtResource("2_6vyjm")]
+[node name="OptionsMenu" parent="Panel" instance=ExtResource("2_1gk1h")]
 visible = false
 layout_mode = 1
 metadata/_edit_use_anchors_ = true
