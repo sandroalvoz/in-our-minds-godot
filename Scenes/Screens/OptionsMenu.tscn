@@ -37,7 +37,7 @@ theme_override_constants/separation = 10
 [node name="LanguageSelection" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "LANGUAGE SELECTION"
+text = "LANGUAGE_SELECTION"
 
 [node name="LangugageSelectionContainer" type="GridContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -47,12 +47,13 @@ columns = 2
 [node name="Label2" type="Label" parent="Panel/VBoxContainer/LangugageSelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "LANGUAGE SELECTION"
+text = "LANGUAGE_SELECTION"
 
 [node name="OptionButton" type="OptionButton" parent="Panel/VBoxContainer/LangugageSelectionContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 item_count = 2
+selected = 0
 popup/item_0/text = "English"
 popup/item_0/id = 0
 popup/item_1/text = "Spanish"
@@ -61,8 +62,7 @@ popup/item_1/id = 1
 [node name="ScreenOptions" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "SCREEN OPTIONS
-"
+text = "SCREEN_OPTIONS"
 
 [node name="ScreenOptionsContainer" type="GridContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
@@ -72,7 +72,7 @@ columns = 2
 
 [node name="FullScreenModeLabel" type="Label" parent="Panel/VBoxContainer/ScreenOptionsContainer"]
 layout_mode = 2
-text = "FULLSCREEN MODE"
+text = "FULLSCREEN_MODE"
 
 [node name="FullScreenMode" type="CheckBox" parent="Panel/VBoxContainer/ScreenOptionsContainer"]
 layout_mode = 2
@@ -81,7 +81,7 @@ size_flags_horizontal = 10
 [node name="SoundOptions" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "SOUND OPTIONS
+text = "SOUND_OPTIONS
 "
 
 [node name="SoundOptionsContainer" type="GridContainer" parent="Panel/VBoxContainer"]
@@ -93,7 +93,7 @@ columns = 2
 [node name="Master" type="Label" parent="Panel/VBoxContainer/SoundOptionsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "General"
+text = "MASTER_SLIDER"
 
 [node name="MasterSlider" type="HSlider" parent="Panel/VBoxContainer/SoundOptionsContainer"]
 layout_mode = 2
@@ -106,7 +106,7 @@ value = 1.0
 [node name="Music" type="Label" parent="Panel/VBoxContainer/SoundOptionsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Music"
+text = "MUSIC_SLIDER"
 
 [node name="MusicSlider" type="HSlider" parent="Panel/VBoxContainer/SoundOptionsContainer"]
 layout_mode = 2
@@ -119,7 +119,7 @@ value = 1.0
 [node name="SFX" type="Label" parent="Panel/VBoxContainer/SoundOptionsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "SFX"
+text = "SFX_SLIDER"
 
 [node name="SFXSlider" type="HSlider" parent="Panel/VBoxContainer/SoundOptionsContainer"]
 layout_mode = 2

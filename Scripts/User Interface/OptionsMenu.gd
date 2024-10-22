@@ -12,8 +12,8 @@ func _input(event):
 
 func _on_option_button_item_selected(index):
 		match index:
-			1: TranslationServer.set_locale("en")
-			2: TranslationServer.set_locale("es") 
+			0: TranslationServer.set_locale("en")
+			1: TranslationServer.set_locale("es") 
 		pass 
 
 func _on_full_screen_mode_toggled(toggled_on):
